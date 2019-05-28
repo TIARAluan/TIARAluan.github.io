@@ -3,17 +3,12 @@
   <entry>
     <title><![CDATA[初衷]]></title>
     <url>%2F2019%2F05%2F28%2F%E5%88%9D%E8%A1%B7%2F</url>
-    <content type="text"><![CDATA[之前用Onenote，断断续续，零零散散记过一些笔记。希望这个blog能让我坚持下去。swag~]]></content>
+    <content type="text"><![CDATA[之前用Onenote，断断续续，零零散散记过一些笔记。希望这个blog能让我坚持下去。swag~ 经常会遇到一些问题，百度过后下次遇到继续百度，自己记录下来下次就好办多了 ^-^ 网上的回答需要自己整理，可靠性更强 ^_^ 听说坚持记笔记，阶段性整理会有提高 ^_^]]></content>
       <categories>
         <category>随笔</category>
       </categories>
       <tags>
         <tag>感想</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F05%2F28%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>
