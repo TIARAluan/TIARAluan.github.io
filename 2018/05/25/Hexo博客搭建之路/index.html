@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="向辉-介绍两下自己">
 <meta property="og:description" content="搭建远程博客三要素搭建个人博客=域名(外网可访问的地址)+外网服务器(外网存储文件图片的地方)+解析(本地与服务器做映射)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-28T14:05:34.428Z">
+<meta property="og:updated_time" content="2019-05-29T03:38:57.496Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo博客搭建之路">
 <meta name="twitter:description" content="搭建远程博客三要素搭建个人博客=域名(外网可访问的地址)+外网服务器(外网存储文件图片的地方)+解析(本地与服务器做映射)">
@@ -327,7 +327,19 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-05-29T11:38:57+08:00">
+                2019-05-29
+              </time>
             
           </span>
 
@@ -430,11 +442,33 @@
 <p>由于npm代码仓库的服务器在国外，由于Great Firewall的缘故，下载速度可能不尽如人意，这时你可以使用淘宝的npm代码仓库，通过npm安装cnpm</p>
 </blockquote>
 </li>
-<li><p>下载Hexo框架到/d/Hexo/blog目录下<br>输入命令：<code>cnpm install -g hexo-cli</code>  等待下载完成</p>
-<h1 id="本地使用"><a href="#本地使用" class="headerlink" title="本地使用"></a>本地使用</h1><p><strong>以下命令的执行路径全部都是/d/Hexo/blog</strong></p>
+<li>下载Hexo框架到/d/Hexo/blog目录下<br>输入命令：<code>cnpm install -g hexo-cli</code>  等待下载完成</li>
+</ol>
+<hr>
+<h1 id="本地使用"><a href="#本地使用" class="headerlink" title="本地使用"></a>本地使用</h1><p> <strong>以下命令的执行路径全部都是/d/Hexo/blog</strong></p>
+<ol>
+<li>初始化一个博客，命令行输入<br><code>hexo init</code></li>
+<li>新建一篇博客，命令行输入<br><code>hexo n &quot;我的第一篇博客&quot;</code><br>这时在D:\Hexo\blog\source_posts下会生成一个<strong>我的第一篇博客.md</strong>文件，用编辑器打开即可写文章。 </li>
+<li>清理博客文件<br><code>hexo clean</code></li>
+<li>生成博客文件<br><code>hexo g</code> (g是generate)</li>
+<li>启动博客文件<br><code>hexo s</code> (s是server，默认端口号是4000)</li>
+<li>打开浏览器输入 <em><a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></em> 即可看到一个博客页面</li>
+<li>以后修改完配置文件和写好文章后在<em>本地</em> 启动博客的一个流程都是<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-
+<hr>
+<h1 id="远程部署"><a href="#远程部署" class="headerlink" title="远程部署"></a>远程部署</h1><h2 id="一、本地-Github白嫖"><a href="#一、本地-Github白嫖" class="headerlink" title="一、本地+Github白嫖"></a>一、本地+Github白嫖</h2><ol>
+<li>生成github.io 仓库<br>登录 <a href="https://github.com" target="_blank" rel="noopener">github</a> 创建仓库，<strong>仓库名称必须是</strong> <code>你的github账号名称.github.io</code> </li>
+<li>下载git部署插件，/Hexo/blog路径下命令行输入<br><code>cnpm install --save hexo-deployer-git</code></li>
+<li><p>修改站点配置_config.yaml文件<br>deploy属性下修改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/TIARAluan/TIARAluan.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在之前本地启动的基础上加上一句 <code>hexo d</code> 将博客文件推到新建的github仓库中去</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>部署成功后，浏览器输入 <code>http://你的github账号名称.github.io</code> 即可享用啦</p>
+<h2 id="二、买域名-租服务器"><a href="#二、买域名-租服务器" class="headerlink" title="二、买域名+租服务器"></a>二、买域名+租服务器</h2>
       
     </div>
     
@@ -469,6 +503,21 @@
       
 
       
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
       
       
 
@@ -661,6 +710,10 @@ var jiathis_config={
                     <a href="https://theme-next.iissnan.com/" title="NexT官方文档" target="_blank">NexT官方文档</a>
                   </li>
                 
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.easyicon.net/" title="Icon库" target="_blank">Icon库</a>
+                  </li>
+                
               </ul>
             </div>
           
@@ -680,7 +733,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建远程博客三要素"><span class="nav-number">1.</span> <span class="nav-text">搭建远程博客三要素</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo是什么"><span class="nav-number">2.</span> <span class="nav-text">Hexo是什么</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Hexo框架"><span class="nav-number">3.</span> <span class="nav-text">安装Hexo框架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#本地使用"><span class="nav-number">4.</span> <span class="nav-text">本地使用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建远程博客三要素"><span class="nav-number">1.</span> <span class="nav-text">搭建远程博客三要素</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo是什么"><span class="nav-number">2.</span> <span class="nav-text">Hexo是什么</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Hexo框架"><span class="nav-number">3.</span> <span class="nav-text">安装Hexo框架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#本地使用"><span class="nav-number">4.</span> <span class="nav-text">本地使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#远程部署"><span class="nav-number">5.</span> <span class="nav-text">远程部署</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、本地-Github白嫖"><span class="nav-number">5.1.</span> <span class="nav-text">一、本地+Github白嫖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、买域名-租服务器"><span class="nav-number">5.2.</span> <span class="nav-text">二、买域名+租服务器</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1230,6 +1283,31 @@ var jiathis_config={
   
 
   
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
   
 
   
