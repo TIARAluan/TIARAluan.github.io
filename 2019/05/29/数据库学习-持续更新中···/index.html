@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="博客,Node.js,Git,">
+  <meta name="keywords" content="数据库,MySQL,后端,">
 
 
 
@@ -86,18 +86,23 @@
 
 
 
-<meta name="description" content="搭建远程博客三要素搭建个人博客=域名(外网可访问的地址)+外网服务器(外网存储文件图片的地方)+解析(本地与服务器做映射)">
-<meta name="keywords" content="博客,Node.js,Git">
+<meta name="description" content="数据库简介 关系型数据库： 基于E-R模型（实体-关系） 使用sql语句进行操作">
+<meta name="keywords" content="数据库,MySQL,后端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo博客搭建之路">
-<meta property="og:url" content="http://yoursite.com/2019/05/25/Hexo博客搭建之路/index.html">
+<meta property="og:title" content="数据库学习(持续更新中···)">
+<meta property="og:url" content="http://yoursite.com/2019/05/29/数据库学习-持续更新中···/index.html">
 <meta property="og:site_name" content="向辉-介绍两下自己">
-<meta property="og:description" content="搭建远程博客三要素搭建个人博客=域名(外网可访问的地址)+外网服务器(外网存储文件图片的地方)+解析(本地与服务器做映射)">
+<meta property="og:description" content="数据库简介 关系型数据库： 基于E-R模型（实体-关系） 使用sql语句进行操作">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-29T03:51:50.643Z">
+<meta property="og:image" content="http://yoursite.com/images/localphoto/MySQL/int.png">
+<meta property="og:image" content="http://yoursite.com/images/localphoto/MySQL/char.png">
+<meta property="og:image" content="http://yoursite.com/images/localphoto/MySQL/time.png">
+<meta property="og:image" content="http://yoursite.com/images/localphoto/MySQL/createtb.png">
+<meta property="og:updated_time" content="2019-05-29T07:07:37.413Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo博客搭建之路">
-<meta name="twitter:description" content="搭建远程博客三要素搭建个人博客=域名(外网可访问的地址)+外网服务器(外网存储文件图片的地方)+解析(本地与服务器做映射)">
+<meta name="twitter:title" content="数据库学习(持续更新中···)">
+<meta name="twitter:description" content="数据库简介 关系型数据库： 基于E-R模型（实体-关系） 使用sql语句进行操作">
+<meta name="twitter:image" content="http://yoursite.com/images/localphoto/MySQL/int.png">
 
 
 
@@ -127,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/05/25/Hexo博客搭建之路/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/29/数据库学习-持续更新中···/">
 
 
 
 
 
-  <title>Hexo博客搭建之路 | 向辉-介绍两下自己</title>
+  <title>数据库学习(持续更新中···) | 向辉-介绍两下自己</title>
   
 
 
@@ -292,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/25/Hexo博客搭建之路/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/29/数据库学习-持续更新中···/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Arnold-luan">
@@ -309,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hexo博客搭建之路</h1>
+          <h1 class="post-title" itemprop="name headline">数据库学习(持续更新中···)</h1>
         
 
         <div class="post-meta">
@@ -321,8 +326,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-25T21:18:30+08:00">
-                2019-05-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-29T13:33:45+08:00">
+                2019-05-29
               </time>
             
 
@@ -337,7 +342,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-05-29T11:51:50+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-05-29T15:07:37+08:00">
                 2019-05-29
               </time>
             
@@ -356,8 +361,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/" itemprop="url" rel="index">
-                    <span itemprop="name">教程</span>
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据库/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
                   </a>
                 </span>
 
@@ -429,46 +445,137 @@
       
 
       
-        <h1 id="搭建远程博客三要素"><a href="#搭建远程博客三要素" class="headerlink" title="搭建远程博客三要素"></a>搭建远程博客三要素</h1><p><strong>搭建个人博客=域名(外网可访问的地址)+外网服务器(外网存储文件图片的地方)+解析(本地与服务器做映射)</strong><br><a id="more"></a></p>
-<h1 id="Hexo是什么"><a href="#Hexo是什么" class="headerlink" title="Hexo是什么"></a>Hexo是什么</h1><p>Hexo是基于JS的一个静态博客框架。<br>静态博客：没有后端数据库加持，意味着页面上无功能模块，只能通过修改代码来修改页面功能和效果。所有文章以.md文件存储在本地电脑上。</p>
-<h1 id="安装Hexo框架"><a href="#安装Hexo框架" class="headerlink" title="安装Hexo框架"></a>安装Hexo框架</h1><ol>
-<li>安装Git</li>
-<li>安装Node.js<br>直接去官网下载安装即可。安装完成后在命令终端输入<br><code>git -v</code><br><code>node -v</code><br><code>npm -v</code>  来检查是否安装配置成功<br>说明：Node.js安装成功后，同时会自动安装一个包管理器，称为npm（Node Package Manager）。<blockquote>
-<p>npm是什么？<br>npm是一个包管理器，发布者将自己的代码发布（npm publish）到代码仓库（registry），使用者将自己需要的包写入package.json文件中，到代码仓库中把代码下载（npm install）下来。</p>
-</blockquote>
+        <h1 id="数据库简介"><a href="#数据库简介" class="headerlink" title="数据库简介"></a>数据库简介</h1><ol>
+<li>关系型数据库：<ul>
+<li>基于E-R模型（实体-关系）</li>
+<li>使用sql语句进行操作<a id="more"></a></li>
+</ul>
 </li>
-<li>磁盘中新建一个文件夹Hexo/blog,我的是/d/Hexo/blog，这个路径就是以后启动 Git Bash here 的地方，以后出了问题也可以把blog文件夹下的    内容全部干掉重来。</li>
-<li>输入如下命令：<code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code>  完成后<br>输入：<code>cnpm -v</code> 检查是否安装成功<blockquote>
-<p>由于npm代码仓库的服务器在国外，由于Great Firewall的缘故，下载速度可能不尽如人意，这时你可以使用淘宝的npm代码仓库，通过npm安装cnpm</p>
-</blockquote>
+<li>分类：文档型（sqlite：移动终端）、服务型</li>
+<li>数据库设计：<ul>
+<li>三范式：<strong>列不可拆分</strong>（数据拆到不能再拆，具体问题具体分析）、<strong>唯一标识</strong>（保证唯一性）、<strong>引用主键</strong>（引用唯一标识建立关系）；</li>
+<li>关系及储存：<ul>
+<li>1对1：一个对象A对应一个对象B，一个对象B对应一个对象A   eg：一个班级只有一个学生，一个学生对应着一个班级。则关系可以存入A或B对象中都可以；</li>
+<li>1对多：一个对象A对应着n个对象B，一个对象B对应着一个对象A  eg：一个班级有n个学生，一个学生对应着一个班级。则<strong>关系存入B对象（多）</strong>；</li>
+<li>多对多：一个对象A对应n个对象B，一个对象B对应m个对象A 。则<strong>新建表AB，专门存关系</strong>，用标识填充数据。</li>
+</ul>
 </li>
-<li>下载Hexo框架到/d/Hexo/blog目录下<br>输入命令：<code>cnpm install -g hexo-cli</code>  等待下载完成</li>
+</ul>
+</li>
 </ol>
 <hr>
-<h1 id="本地使用"><a href="#本地使用" class="headerlink" title="本地使用"></a>本地使用</h1><p> <strong>以下命令的执行路径全部都是/d/Hexo/blog</strong></p>
+<h1 id="数据库语法"><a href="#数据库语法" class="headerlink" title="数据库语法"></a>数据库语法</h1><h2 id="基本语句"><a href="#基本语句" class="headerlink" title="基本语句"></a>基本语句</h2><ol>
+<li>入门</li>
+</ol>
+<ul>
+<li>连接服务器 ：<code>mysql -u 用户名 -p 密码</code>                     </li>
+<li>查看所有库： <code>show database</code></li>
+<li>选库语句：<code>use 库名</code>；</li>
+<li>查看库下的表：<code>show tables</code>；</li>
+<li>查看表结构：<code>desc class</code>；</li>
+<li>创建数据库：<code>create database 库名 charset utf8</code>；</li>
+<li>删除数据库：<code>drop database 库名</code>；    MySQL中表、列可以改名，database不能改名</li>
+<li>建表：<code>create table stu（Snum int，Sname varchar(10)) engine myisam charset utf8</code>;</li>
+<li>删除表：<code>drop table stu</code>；</li>
+<li>给表改名：<code>rename table stu to newstu</code>;</li>
+<li>插入语句：<code>insert into stu values (1,&#39;zhangsan&#39;),(2,&#39;lisi&#39;),(3,&#39;wangwu&#39;)</code>;</li>
+<li>查询语句：<code>select * from stu</code>；</li>
+<li>清空表数据：<code>truncate stu</code>；</li>
+</ul>
+<ol start="2">
+<li>增删改查(基本)</li>
+</ol>
+<ul>
+<li><p>建表：CREATE语句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE `test`.`class` (</span><br><span class="line">`id` int(255) NOT NULL AUTO_INCREMENT,</span><br><span class="line">`sname` varchar(10) CHARACTER SET utf8 NOT NULL DEFAULT &apos;&apos;,</span><br><span class="line">`gender` char(1) CHARACTER SET utf8 NOT NULL DEFAULT &apos;&apos;,</span><br><span class="line">`company` varchar(20) CHARACTER SET utf8 NOT NULL DEFAULT &apos;&apos;,</span><br><span class="line">`salary` decimal(6, 2) NOT NULL DEFAULT &apos;&apos;,</span><br><span class="line">`fanbu` smallint(20) NOT NULL DEFAULT &apos;&apos;,</span><br><span class="line">PRIMARY KEY (`id`)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加语句：INSERT语句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO `test`.`class`(`sname`, `gender`, `salary`, `fanbu`) VALUES (&apos;李四&apos;, &apos;男&apos;, 5000.00, 200)；</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>如果插入所有列，则可以不声明列名：INSERT INTO test.class VALUES (3,’zlatan’, ‘男’,’Blibli’ ,8000.00, 500);<br>注意：id虽然为自增型，但是插入的时候还是要写，或者写null占位；插入多行用逗号隔开；</p>
+</blockquote>
+<ul>
+<li>修改语句：UPDATE语句<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">update 表名 set 列1=新值，列2=新值 where id=4；</span><br><span class="line">UPDATE test.class SET fanbu=159 WHERE &apos;gender&apos;=&apos;男&apos; AND &apos;salary&apos;&gt;8000.00;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>where 表达式为真则执行生效，不一定为id，一定要加生效行，不然这一列全改了，问题很严重        </p>
+</blockquote>
+<ul>
+<li>删除语句：DELETE<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from class where salary&gt;8500</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>删除是指删除整行</p>
+</blockquote>
+<ul>
+<li>查询语句：SELECT语句<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select sname,fanbu from class where id=3;  //取部分列，单行；</span><br><span class="line">select *from class //取所有行所有列，*代表所有列，表名后不加where条件，则选所有行；</span><br><span class="line">select sanme，fanbu from class //取部分列，所有行；</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="3">
+<li>字段类型（建表用）<br><strong>列类型：不同的列类型，所占据的空间和效率是不一样的，主要讨论列类型的存储范围与占据字节的关系</strong></li>
+</ol>
+<ul>
+<li>整型<br><img src="\images\localphoto\MySQL\int.png" alt="整数类型的存储和范围"><br>int系列声明时的参数<code>（M）、unsigned 、zeroFill</code><blockquote>
+<p>MySQL还支持选择在该类型关键字后面的括号内指定整数值的显示宽度(例如，INT(4))。该可选显示宽度规定用于显示宽度小于指定的列宽度的值时从左侧填满宽度。<br>显示宽度并不限制可以在列内保存的值的范围，也不限制超过列的指定宽度的值的显示。</p>
+</blockquote>
+</li>
+</ul>
+<p><em>不加特殊说明时，默认有符号；加unsigned表示无符号，可以影响存储范围；</em><br><em>M必需配合zeroFill使用才有意义：M表示补零宽度，和zerofill一起使用（保证位数相同），zerofill默认是unsigned类型；</em><br><code>如添加一列类型为smallint的字段：alter table cd add num smallint(5) zerofill not null default 0</code></p>
+<ul>
+<li>浮点型<br>float（M，D）；decimal（M，D）<br>M 叫标度—-&gt;代表总位数、D是精度—-&gt;代表小数点右边后的位数；<br>decimal精度更高，float有时候会损失精度；</li>
+<li>字符型<br><img src="\images\localphoto\MySQL\char.png" alt="字符类型的存储和范围"></li>
+<li>日期、时间类型<br><img src="\images\localphoto\MySQL\time.png" alt="日期类型的存储和范围"></li>
+</ul>
+<hr>
+<ol start="4">
+<li>建表实战<br>社交网站会员表 member<br><img src="\images\localphoto\MySQL\createtb.png" alt="建表示例"></li>
+</ol>
+<hr>
+<h2 id="进阶语句"><a href="#进阶语句" class="headerlink" title="进阶语句"></a>进阶语句</h2><h3 id="对列的操作-alter-table"><a href="#对列的操作-alter-table" class="headerlink" title="对列的操作(alter table)"></a>对列的操作(alter table)</h3><ul>
+<li>加一列在表的最后：<br><code>alter table 表名 add 列名称 列类型 列参数</code>；</li>
+<li>加一列在指定列后：<br><code>alter table 表名 add 列名称 列类型 列参数 after 某列</code>；</li>
+<li>加一列在表的最前面：<br><code>alter table 表名 add 列名称 列类型 列参数 first</code>；</li>
+<li>删除列：<br><code>alter table 表名 drop 列名</code>；</li>
+<li>修改列：<br><code>alter table 表名 modify 列名 列类型 列参数----------modify不能改列名，要用change</code>；</li>
+<li>修改列名和列参数：<br><code>alter table 表名 change 旧列名 新列名 列类型 列参数</code>；<h3 id="查询语句-select"><a href="#查询语句-select" class="headerlink" title="查询语句(select)"></a>查询语句(select)</h3></li>
+</ul>
 <ol>
-<li>初始化一个博客，命令行输入<br><code>hexo init</code></li>
-<li>新建一篇博客，命令行输入<br><code>hexo n &quot;我的第一篇博客&quot;</code><br>这时在D:\Hexo\blog\source_posts下会生成一个<strong>我的第一篇博客.md</strong>文件，用编辑器打开即可写文章。 </li>
-<li>清理博客文件<br><code>hexo clean</code></li>
-<li>生成博客文件<br><code>hexo g</code> (g是generate)</li>
-<li>启动博客文件<br><code>hexo s</code> (s是server，默认端口号是4000)</li>
-<li>打开浏览器输入 <em><a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></em> 即可看到一个博客页面</li>
-<li>以后修改完配置文件和写好文章后在<em>本地</em> 启动博客的一个流程都是<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<li>查询模型：</li>
+</ol>
+<ul>
+<li>列看成变量，where后面跟的是表达式，定位到列，一行一行的匹配判断，表达式为真则执行</li>
+<li>既然是变量，就可以进行计算，即意味着可以组合成新的列进行查询显示</li>
+</ul>
+<ol start="2">
+<li>进阶查询</li>
+</ol>
+<ul>
+<li>where条件查询</li>
+<li>group by 分组</li>
+<li>having 筛选</li>
+<li>order by 排序</li>
+<li>limit 限制结果条数</li>
+</ul>
+<ol start="3">
+<li>实战中练习<br>商品表：goods<br>字段：Goods_id、Cat_id、Goods_sn、Click_count、Goods_number、Market_price、Shop_price、Add_time、Is_best、Is_new、Is_hot<br><strong>把其他表的数据（shop.goods）插入到本表中(test.goods)</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Insert into test.goods select Goods_id,Cat_id,Goods_sn,Click_count,Goods_number,Market_price,Shop_price,add_time,is_best,is_new,is_hot from shop.goods</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<hr>
-<h1 id="远程部署"><a href="#远程部署" class="headerlink" title="远程部署"></a>远程部署</h1><h2 id="一、本地-Github白嫖"><a href="#一、本地-Github白嫖" class="headerlink" title="一、本地+Github白嫖"></a>一、本地+Github白嫖</h2><ol>
-<li>生成github.io 仓库<br>登录 <a href="https://github.com" target="_blank" rel="noopener">github</a> 创建仓库，<strong>仓库名称必须是</strong> <code>你的github账号名称.github.io</code> </li>
-<li>下载git部署插件，/Hexo/blog路径下命令行输入<br><code>cnpm install --save hexo-deployer-git</code></li>
-<li><p>修改站点配置_config.yaml文件<br>deploy属性下修改为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/TIARAluan/TIARAluan.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在之前本地启动的基础上加上一句 <code>hexo d</code> 将博客文件推到新建的github仓库中去</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>部署成功后，浏览器输入 <code>http://你的github账号名称.github.io</code> 即可享用啦</p>
-<h2 id="二、买域名-租服务器"><a href="#二、买域名-租服务器" class="headerlink" title="二、买域名+租服务器"></a>二、买域名+租服务器</h2>
+<p><strong><em> 基础查询where </em></strong><br>1.1、查询商品主键为32的商品；<br><code>Select goods_id,goods_name,shop_price from goods where goods_id=32;</code></p>
+<p>1.2、不属于第3栏目的所有商品；<br><code>Select goods_id,cat_id,goods_number from goods where cat_id !=3;   !=等价于&lt;&gt;</code></p>
+<p>1.3、本店价格高于和等于3000的商品；<br><code>Select goods_id,goods_name,shop_price from goods where Shop_price&gt;=3000;</code></p>
+<p>1.4、取出第4栏目和第11栏目的商品；<br><code>Select goods_id,goods_name,shop_price from goods where cat_id in (4,11); //cat_id在4，11这个集合里都满足</code></p>
+<p>1.4.1、取出不属于第3栏目且不属于第11栏目的商品；<br><code>Select goods_id,goods_name,shop_price from goods where cat_id not in (3,11);</code><br><code>Select goods_id,goods_name,shop_price from goods where cat_id !=3 and cat_id !=11 ;</code></p>
+<p>1.5、取出价格在100到500之间的商品；<br><code>Select goods_id,goods_name,shop_price from goods where Shop_price between 100 and 500；</code></p>
+<p>1.6、取出价格大于100且小于300，或者大于4000且小于5000的商品；<br><code>Select goods_id,goods_name,shop_price from goods where shop_price&gt;100 and shop_price&lt;300 or shop_price&gt;4000 and shop_price&lt;5000;  //and优先级比or高</code></p>
+<p>1.7、取出第3个栏目下价格小于1000或者大于3000，同时点击量大于等于5的商品；<br><code>Select goods_id,goods_name,shop_price,click_count from goods where cat_id=3 and (shop_price&lt;1000 or shop_price&gt;3000) and click_count&gt;=5;</code></p>
+<p>1.8、查出以“诺基亚”开头的商品；#模糊查询；<br><code>Select goods_id,goods_name,shop_price,click_count from goods where goods_name like &#39;诺基亚%&#39;;    //其中“%”能取出任意字符，“_”匹配单一字符</code><br><code>Select goods_id,goods_name,shop_price,click_count from goods where goods_name like &#39;诺基亚N__&#39;;  //查出诺基亚N加两个字符的商品</code></p>
+<p>1.9、查出本店价格比市场价格的差值；<br><code>Select goods_id,goods_name,market_price-shop_price from goods;</code><br><code>Select goods_id,goods_name,(market_price-shop_price) as discount from goods;  //以discount 显示</code><br><code>Select goods_id,goods_name,(market_price-shop_price) as discount from goods where (market_price-shop_price)&gt;200; //查出差值大于200商品，where后不能是discount</code></p>
+<p><strong>练习题：有如下表和数组，把num值处于[20,29]之间，改为20，num值处于[30,39]之间的，改为30；</strong><br>    <code>把num当成变量看，num/10取整，再乘以10
+    Update table set num=floor(num/10)*10 where num&gt;=20 and num&lt;=39;</code></p>
+
       
     </div>
     
@@ -522,11 +629,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/博客/" rel="tag"><i class="fa fa-tag"></i> 博客</a>
+            <a href="/tags/数据库/" rel="tag"><i class="fa fa-tag"></i> 数据库</a>
           
-            <a href="/tags/Node-js/" rel="tag"><i class="fa fa-tag"></i> Node.js</a>
+            <a href="/tags/MySQL/" rel="tag"><i class="fa fa-tag"></i> MySQL</a>
           
-            <a href="/tags/Git/" rel="tag"><i class="fa fa-tag"></i> Git</a>
+            <a href="/tags/后端/" rel="tag"><i class="fa fa-tag"></i> 后端</a>
           
         </div>
       
@@ -554,15 +661,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/05/28/十大经典排序算法/" rel="next" title="十大经典排序算法">
+                <i class="fa fa-chevron-left"></i> 十大经典排序算法
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/26/初衷/" rel="prev" title="初衷">
-                初衷 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -762,7 +869,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建远程博客三要素"><span class="nav-number">1.</span> <span class="nav-text">搭建远程博客三要素</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo是什么"><span class="nav-number">2.</span> <span class="nav-text">Hexo是什么</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Hexo框架"><span class="nav-number">3.</span> <span class="nav-text">安装Hexo框架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#本地使用"><span class="nav-number">4.</span> <span class="nav-text">本地使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#远程部署"><span class="nav-number">5.</span> <span class="nav-text">远程部署</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、本地-Github白嫖"><span class="nav-number">5.1.</span> <span class="nav-text">一、本地+Github白嫖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、买域名-租服务器"><span class="nav-number">5.2.</span> <span class="nav-text">二、买域名+租服务器</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库简介"><span class="nav-number">1.</span> <span class="nav-text">数据库简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库语法"><span class="nav-number">2.</span> <span class="nav-text">数据库语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本语句"><span class="nav-number">2.1.</span> <span class="nav-text">基本语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进阶语句"><span class="nav-number">2.2.</span> <span class="nav-text">进阶语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对列的操作-alter-table"><span class="nav-number">2.2.1.</span> <span class="nav-text">对列的操作(alter table)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询语句-select"><span class="nav-number">2.2.2.</span> <span class="nav-text">查询语句(select)</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
