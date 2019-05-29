@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[十大经典排序算法]]></title>
-    <url>%2F2018%2F05%2F28%2F%E5%8D%81%E5%A4%A7%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%2F</url>
+    <url>%2F2019%2F05%2F28%2F%E5%8D%81%E5%A4%A7%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%2F</url>
     <content type="text"><![CDATA[十大经典排序算法排序算法是《数据结构与算法》中最基本的算法之一。排序算法可以分为内部排序和外部排序，内部排序是数据记录在内存中进行排序，而外部排序是因排序的数据很大，一次不能容纳全部的排序记录，在排序过程中需要访问外存。常见的内部排序算法有：插入排序、希尔排序、选择排序、冒泡排序、归并排序、快速排序、堆排序、基数排序等。用一张图概括： 关于时间复杂度： 平方阶 (O(n2)) 排序 各类简单排序：直接插入、直接选择和冒泡排序。 线性对数阶 (O(nlog2n)) 排序 快速排序、堆排序和归并排序； O(n1+§)) 排序，§ 是介于 0 和 1 之间的常数。 希尔排序 线性阶 (O(n)) 排序 基数排序，此外还有桶、箱排序。 关于稳定性： 稳定的排序算法：冒泡排序、插入排序、归并排序和基数排序。 不是稳定的排序算法：选择排序、快速排序、希尔排序、堆排序。 名词解释： n：数据规模 k：“桶”的个数 In-place：占用常数内存，不占用额外内存 Out-place：占用额外内存 稳定性：排序后 2 个相等键值的顺序和排序之前它们的顺序相同 GitBook 内容大纲 冒泡排序 选择排序 插入排序 希尔排序 归并排序 快速排序 堆排序 计数排序 桶排序 基数排序]]></content>
       <categories>
         <category>算法</category>
@@ -14,8 +14,8 @@
   </entry>
   <entry>
     <title><![CDATA[MarkDownwn基本用法]]></title>
-    <url>%2F2018%2F05%2F26%2FMarkDownwn%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[是什么md是一种标记语言，通过简单的标记语法，使得普通文本具有一定的格式。有专门的编辑器打开，但我使用的是VSCode，一款很强大的编辑器，必备工具。 怎么用 文本语法 标题：用#来标志，#越多，标题等级越低； 斜体：*斜体*； 粗体：**粗体**； 斜体加粗：*** 斜体加粗 *** ； 高亮：==高亮==； 删除线：删除线； 分割线：三个—或者三个***； 引用：用&gt;即可 ; 代码 代码行：反括号(tab上面的键) print(hello world) 代码块：用三个反括号包起来123public void main()&#123; system.out.printin(&quot;hello&quot;);&#125; 列表 无序列表：用 * 或 + 或 - 都行，推荐用星号，注意符号后面有空格 1 无序列表1 2 无序列表2 3 无序列表3 有序列表：数字. 列表名即可，如：1.有序列表 有序列表1 有序列表2 有序列表3特别注意，有序列表的序号是根据第一行列表的数字顺序来的 链接 超链接行内式：[超链接名](超链接地址 &quot;超链接title&quot;)参数式：[超链接名]：超链接地址 &quot;超链接title&quot;示例：百度一下 图片行内式：![图片描述](图片地址 &#39;&#39;图片title&#39;&#39;)参数试：[图片描述]：图片地址 &#39;&#39;图片title&#39;&#39; 表格 1234表头|表头|表头---|:--:|---:内容|内容|内容内容|内容|内容 注：第二行分割表头和内容。有一个就行，为了对齐，多加了几个。文字默认居左；两边加：表示文字居中；右边加：表示文字居右。 防坑1. 点(.)后面要加空格； 2. 关键字符转义输出，需在关键字**前**加反斜杠\]]></content>
+    <url>%2F2019%2F05%2F26%2FMarkDownwn%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[是什么md是一种标记语言，通过简单的标记语法，使得普通文本具有一定的格式。有专门的编辑器打开，但我使用的是VSCode，一款很强大的编辑器，必备工具。 怎么用 文本语法 标题：用#来标志，#越多，标题等级越低； 斜体：*斜体*； 粗体：**粗体**； 斜体加粗：*** 斜体加粗 *** ； 高亮：==高亮==； 删除线：删除线； 分割线：三个—或者三个***； 引用：用&gt;即可 ; 代码 代码行：反括号(tab上面的键) print(hello world) 代码块：用三个反括号包起来123public void main()&#123; system.out.printin(&quot;hello&quot;);&#125; 列表 无序列表：用 * 或 + 或 - 都行，推荐用星号，注意符号后面有空格 1 无序列表1 2 无序列表2 3 无序列表3 有序列表：数字. 列表名即可，如：1.有序列表 有序列表1 有序列表2 有序列表3特别注意，有序列表的序号是根据第一行列表的数字顺序来的 链接 超链接行内式：[超链接名](超链接地址 &quot;超链接title&quot;)参数式：[超链接名]：超链接地址 &quot;超链接title&quot;示例：百度一下 图片行内式：![图片描述](图片地址 &#39;&#39;图片title&#39;&#39;)参数试：[图片描述]：图片地址 &#39;&#39;图片title&#39;&#39; 表格 1234表头|表头|表头---|:--:|---:内容|内容|内容内容|内容|内容 注：第二行分割表头和内容。有一个就行，为了对齐，多加了几个。文字默认居左；两边加：表示文字居中；右边加：表示文字居右。 防坑1. 点(.)后面要加空格； 2. #后面要加空格； 3. 关键字符转义输出，需在关键字**前**加反斜杠\。]]></content>
       <categories>
         <category>工具</category>
       </categories>
@@ -25,7 +25,7 @@
   </entry>
   <entry>
     <title><![CDATA[初衷]]></title>
-    <url>%2F2018%2F05%2F26%2F%E5%88%9D%E8%A1%B7%2F</url>
+    <url>%2F2019%2F05%2F26%2F%E5%88%9D%E8%A1%B7%2F</url>
     <content type="text"><![CDATA[之前用Onenote，断断续续，零零散散记过一些笔记。希望这个blog能让我坚持下去。swag~ 经常会遇到一些问题，百度过后下次遇到继续百度，自己记录下来下次就好办多了 ^-^网上的回答需要自己整理，可靠性更强 ^^听说坚持记笔记，是一件很cool的事情 ^^]]></content>
       <categories>
         <category>随笔</category>
@@ -36,7 +36,7 @@
   </entry>
   <entry>
     <title><![CDATA[Hexo博客搭建之路]]></title>
-    <url>%2F2018%2F05%2F25%2FHexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E8%B7%AF%2F</url>
+    <url>%2F2019%2F05%2F25%2FHexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E8%B7%AF%2F</url>
     <content type="text"><![CDATA[搭建远程博客三要素搭建个人博客=域名(外网可访问的地址)+外网服务器(外网存储文件图片的地方)+解析(本地与服务器做映射) Hexo是什么Hexo是基于JS的一个静态博客框架。静态博客：没有后端数据库加持，意味着页面上无功能模块，只能通过修改代码来修改页面功能和效果。所有文章以.md文件存储在本地电脑上。 安装Hexo框架 安装Git 安装Node.js直接去官网下载安装即可。安装完成后在命令终端输入git -vnode -vnpm -v 来检查是否安装配置成功说明：Node.js安装成功后，同时会自动安装一个包管理器，称为npm（Node Package Manager）。 npm是什么？npm是一个包管理器，发布者将自己的代码发布（npm publish）到代码仓库（registry），使用者将自己需要的包写入package.json文件中，到代码仓库中把代码下载（npm install）下来。 磁盘中新建一个文件夹Hexo/blog,我的是/d/Hexo/blog，这个路径就是以后启动 Git Bash here 的地方，以后出了问题也可以把blog文件夹下的 内容全部干掉重来。 输入如下命令：npm install -g cnpm --registry=https://registry.npm.taobao.org 完成后输入：cnpm -v 检查是否安装成功 由于npm代码仓库的服务器在国外，由于Great Firewall的缘故，下载速度可能不尽如人意，这时你可以使用淘宝的npm代码仓库，通过npm安装cnpm 下载Hexo框架到/d/Hexo/blog目录下输入命令：cnpm install -g hexo-cli 等待下载完成 本地使用 以下命令的执行路径全部都是/d/Hexo/blog 初始化一个博客，命令行输入hexo init 新建一篇博客，命令行输入hexo n &quot;我的第一篇博客&quot;这时在D:\Hexo\blog\source_posts下会生成一个我的第一篇博客.md文件，用编辑器打开即可写文章。 清理博客文件hexo clean 生成博客文件hexo g (g是generate) 启动博客文件hexo s (s是server，默认端口号是4000) 打开浏览器输入 http://localhost:4000 即可看到一个博客页面 以后修改完配置文件和写好文章后在本地 启动博客的一个流程都是123hexo cleanhexo ghexo s 远程部署一、本地+Github白嫖 生成github.io 仓库登录 github 创建仓库，仓库名称必须是 你的github账号名称.github.io 下载git部署插件，/Hexo/blog路径下命令行输入cnpm install --save hexo-deployer-git 修改站点配置_config.yaml文件deploy属性下修改为： 1234deploy: type: git repo: https://github.com/TIARAluan/TIARAluan.github.io.git branch: master 在之前本地启动的基础上加上一句 hexo d 将博客文件推到新建的github仓库中去 1234hexo cleanhexo ghexo dhexo s 部署成功后，浏览器输入 http://你的github账号名称.github.io 即可享用啦 二、买域名+租服务器]]></content>
       <categories>
         <category>教程</category>
