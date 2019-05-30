@@ -1513,7 +1513,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-05-30T20:09:29+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-05-30T20:13:02+08:00">
                 2019-05-30
               </time>
             
@@ -1601,79 +1601,17 @@
 
       
         
-          
-            <a id="more"></a>
-<h1 id="String类"><a href="#String类" class="headerlink" title="String类"></a>String类</h1><p>Java中将字符串作为对象来管理</p>
-<h2 id="1-声明字符串"><a href="#1-声明字符串" class="headerlink" title="1.声明字符串"></a>1.声明字符串</h2><p><code>String str [null]   eg:String s</code>;</p>
-<h2 id="2-创建字符串"><a href="#2-创建字符串" class="headerlink" title="2.创建字符串"></a>2.创建字符串</h2><p>用String类的构造方法</p>
-<ul>
-<li>String（char a[]）方法<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> a[]=&#123;<span class="string">'s'</span>,<span class="string">'t'</span>,<span class="string">'u'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>,<span class="string">'n'</span>,<span class="string">'t'</span>&#125;</span><br><span class="line">string s=<span class="keyword">new</span> string(a,<span class="number">2</span>,<span class="number">4</span>)</span><br><span class="line">等价于String s= <span class="keyword">new</span> String(<span class="string">"uden"</span>)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="3-连接字符串"><a href="#3-连接字符串" class="headerlink" title="3.连接字符串"></a>3.连接字符串</h2><ul>
-<li>连接多个字符串<br>用“+”即可</li>
-<li>连接其他数据类型<br>结果：会将数据直接转换成字符串</li>
-</ul>
-<h2 id="4-获取字符串信息"><a href="#4-获取字符串信息" class="headerlink" title="4.获取字符串信息"></a>4.获取字符串信息</h2><ul>
-<li>获取长度<br><code>str.length()</code></li>
-<li>字符串查找</li>
-</ul>
-<ol>
-<li><code>str.indexOf(substr)</code>  返回值为索引位置</li>
-<li><code>str.lastIndexOf(substr)</code> 返回值为字符串最后出现的位置，若没有，返回-1</li>
-</ol>
-<ul>
-<li>获取指定索引位置的字符<br><code>str.charAt(int index)</code></li>
-</ul>
-<h2 id="5-字符串操作"><a href="#5-字符串操作" class="headerlink" title="5.字符串操作"></a>5.字符串操作</h2><ul>
-<li>获取子字符串</li>
-</ul>
-<ol>
-<li><code>str.substring(int beginIndex)</code></li>
-<li><code>str.substring(int beginIndex,int endIndex)</code></li>
-</ol>
-<ul>
-<li><p>去除空格<br><code>str.trim()</code></p>
-</li>
-<li><p>字符串替换<br><code>str.replace(char oldChar,char newChar)</code>  大小写敏感，所有都会替换</p>
-</li>
-<li><p>判断开始与结尾<br><code>str.startsWith(String prefix)`</code><br><code>str.endWith(String suffix)</code></p>
-</li>
-<li><p>判断字符串是否相等<br><strong>不能简单的用==，因为比较运算符比较的是两个字符串的地址是否相同</strong></p>
-</li>
-</ul>
-<ol>
-<li><code>str.equals(String otherstr)</code>  前提是两个字符串具有相同的字符和长度</li>
-<li><code>str.equalsIgnoreCase(String otherstr)</code>   忽略大小写</li>
-</ol>
-<ul>
-<li><p>按字典顺序比较两个字符串<br><code>str.compareTo(String otherstr)</code><br>str位于otherstr之前，返回负整数<br>str位于otherstr之后，返回正整数<br>相等，返回0；</p>
-</li>
-<li><p>大小写转换<br><code>str.toLowerCase()</code><br><code>str.toUpperCase()</code></p>
-</li>
-<li><p>字符串分割<br><code>str.split(String sign)</code><br><code>str.split(String sign,int limit)</code></p>
-</li>
-<li><p>格式化字符串<br><code>str.format(String format,Object...args)</code></p>
-<ul>
-<li>日期和时间字符串格式化<br>Date date = new Date();<br>String s = String.format(“%te”,date)  %te表示一月中的某一天</li>
-</ul>
-</li>
-</ul>
-<h2 id="6-正则表达式"><a href="#6-正则表达式" class="headerlink" title="6.正则表达式"></a>6.正则表达式</h2><p>通常被用于判断语句中，用来检查某一字符串是否满足某一格式。<br>正则表达式是含有一些具有特殊意义字符的字符串，这些字符被称为元字符</p>
-<h2 id="7-字符串生成器"><a href="#7-字符串生成器" class="headerlink" title="7.字符串生成器"></a>7.字符串生成器</h2><p>对于创建的字符串，他的长度是固定的，为了避免内存开销，产生了可变的字符序列StringBuilder类<br>若要使StringBuilder最后输出字符串，可使用toString()方法</p>
-<ul>
-<li><code>append()</code>方法    用于追加内容</li>
-<li><code>insert(int offset,arg)</code>方法    用于指定位置插入数据</li>
-<li><code>delete(int start,int end)</code>     用于删除内容</li>
-</ul>
-<blockquote>
-<p>练习：<br>把字符串中的英文去掉<br>答：使用正则表达式。元字符为\p{Alpha}<br>把字符串倒序输出<br>1.最容易想到的估计就是利用String类的toCharArray()，再倒序输出数组的方法<br>2.不把字符串定义为String类，而是定义成一个StringBuffer类，用StringBuffer类中的reverse()方法直接倒序字符串</p>
-</blockquote>
-
-          
+          <h1 id="String类"><a href="#String类" class="headerlink" title="String类"></a>String类</h1><p>Java中将字符串作为对象来管理<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/03/30/Java语法（持续更新···）/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
-    </div>
+    </p></div>
     
     
     
