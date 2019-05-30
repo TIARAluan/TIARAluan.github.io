@@ -76,4 +76,16 @@
         <tag>Git</tag>
       </tags>
   </entry>
+  <entry>
+    <title><![CDATA[Java语法（持续更新···）]]></title>
+    <url>%2F2019%2F03%2F30%2FJava%E8%AF%AD%E6%B3%95%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%C2%B7%C2%B7%C2%B7%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[String类Java中将字符串作为对象来管理 1.声明字符串String str [null] eg:String s; 2.创建字符串用String类的构造方法 String（char a[]）方法123char a[]=&#123;'s','t','u','d','e','n','t'&#125;string s=new string(a,2,4)等价于String s= new String("uden") 3.连接字符串 连接多个字符串用“+”即可 连接其他数据类型结果：会将数据直接转换成字符串 4.获取字符串信息 获取长度str.length() 字符串查找 str.indexOf(substr) 返回值为索引位置 str.lastIndexOf(substr) 返回值为字符串最后出现的位置，若没有，返回-1 获取指定索引位置的字符str.charAt(int index) 5.字符串操作 获取子字符串 str.substring(int beginIndex) str.substring(int beginIndex,int endIndex) 去除空格str.trim() 字符串替换str.replace(char oldChar,char newChar) 大小写敏感，所有都会替换 判断开始与结尾str.startsWith(String prefix)`str.endWith(String suffix) 判断字符串是否相等不能简单的用==，因为比较运算符比较的是两个字符串的地址是否相同 str.equals(String otherstr) 前提是两个字符串具有相同的字符和长度 str.equalsIgnoreCase(String otherstr) 忽略大小写 按字典顺序比较两个字符串str.compareTo(String otherstr)str位于otherstr之前，返回负整数str位于otherstr之后，返回正整数相等，返回0； 大小写转换str.toLowerCase()str.toUpperCase() 字符串分割str.split(String sign)str.split(String sign,int limit) 格式化字符串str.format(String format,Object...args) 日期和时间字符串格式化Date date = new Date();String s = String.format(“%te”,date) %te表示一月中的某一天 6.正则表达式通常被用于判断语句中，用来检查某一字符串是否满足某一格式。正则表达式是含有一些具有特殊意义字符的字符串，这些字符被称为元字符 7.字符串生成器对于创建的字符串，他的长度是固定的，为了避免内存开销，产生了可变的字符序列StringBuilder类若要使StringBuilder最后输出字符串，可使用toString()方法 append()方法 用于追加内容 insert(int offset,arg)方法 用于指定位置插入数据 delete(int start,int end) 用于删除内容 练习：把字符串中的英文去掉答：使用正则表达式。元字符为\p{Alpha}把字符串倒序输出 最容易想到的估计就是利用String类的toCharArray()，再倒序输出数组的方法 不把字符串定义为String类，而是定义成一个StringBuffer类，用StringBuffer类中的reverse()方法直接倒序字符串]]></content>
+      <categories>
+        <category>编程语言</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>语法</tag>
+      </tags>
+  </entry>
 </search>
