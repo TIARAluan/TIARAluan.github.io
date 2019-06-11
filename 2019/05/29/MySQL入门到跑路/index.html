@@ -89,8 +89,8 @@
 <meta name="description" content="数据库简介 关系型数据库： 基于E-R模型（实体-关系） 使用sql语句进行操作">
 <meta name="keywords" content="数据库,MySQL,后端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据库学习(持续更新中···)">
-<meta property="og:url" content="http://yoursite.com/2019/05/29/数据库学习-持续更新中···/index.html">
+<meta property="og:title" content="数据库学习">
+<meta property="og:url" content="http://yoursite.com/2019/05/29/MySQL入门到跑路/index.html">
 <meta property="og:site_name" content="向辉-介绍两下自己">
 <meta property="og:description" content="数据库简介 关系型数据库： 基于E-R模型（实体-关系） 使用sql语句进行操作">
 <meta property="og:locale" content="zh-Hans">
@@ -98,9 +98,9 @@
 <meta property="og:image" content="http://yoursite.com/images/localphoto/MySQL/char.png">
 <meta property="og:image" content="http://yoursite.com/images/localphoto/MySQL/time.png">
 <meta property="og:image" content="http://yoursite.com/images/localphoto/MySQL/createtb.png">
-<meta property="og:updated_time" content="2019-05-29T07:07:37.413Z">
+<meta property="og:updated_time" content="2019-06-09T09:31:11.975Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据库学习(持续更新中···)">
+<meta name="twitter:title" content="数据库学习">
 <meta name="twitter:description" content="数据库简介 关系型数据库： 基于E-R模型（实体-关系） 使用sql语句进行操作">
 <meta name="twitter:image" content="http://yoursite.com/images/localphoto/MySQL/int.png">
 
@@ -132,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/05/29/数据库学习-持续更新中···/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/29/MySQL入门到跑路/">
 
 
 
 
 
-  <title>数据库学习(持续更新中···) | 向辉-介绍两下自己</title>
+  <title>数据库学习 | 向辉-介绍两下自己</title>
   
 
 
@@ -307,7 +307,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/29/数据库学习-持续更新中···/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/29/MySQL入门到跑路/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Arnold-luan">
@@ -324,7 +324,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">数据库学习(持续更新中···)</h1>
+          <h1 class="post-title" itemprop="name headline">数据库学习</h1>
         
 
         <div class="post-meta">
@@ -352,8 +352,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-05-29T15:07:37+08:00">
-                2019-05-29
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-09T17:31:11+08:00">
+                2019-06-09
               </time>
             
           </span>
@@ -373,17 +373,6 @@
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/数据库/" itemprop="url" rel="index">
                     <span itemprop="name">数据库</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据库/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
                   </a>
                 </span>
 
@@ -413,7 +402,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.8k
+                  4.6k
                 </span>
               
 
@@ -429,7 +418,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7
+                  19
                 </span>
               
             </div>
@@ -456,8 +445,10 @@
 <li>使用sql语句进行操作<a id="more"></a></li>
 </ul>
 </li>
-<li>分类：文档型（sqlite：移动终端）、服务型</li>
-<li>数据库设计：<ul>
+<li><p>分类：文档型（sqlite：移动终端）、服务型</p>
+</li>
+<li><p>数据库设计：</p>
+<ul>
 <li>三范式：<strong>列不可拆分</strong>（数据拆到不能再拆，具体问题具体分析）、<strong>唯一标识</strong>（保证唯一性）、<strong>引用主键</strong>（引用唯一标识建立关系）；</li>
 <li>关系及储存：<ul>
 <li>1对1：一个对象A对应一个对象B，一个对象B对应一个对象A   eg：一个班级只有一个学生，一个学生对应着一个班级。则关系可以存入A或B对象中都可以；</li>
@@ -469,10 +460,7 @@
 </li>
 </ol>
 <hr>
-<h1 id="数据库语法"><a href="#数据库语法" class="headerlink" title="数据库语法"></a>数据库语法</h1><h2 id="基本语句"><a href="#基本语句" class="headerlink" title="基本语句"></a>基本语句</h2><ol>
-<li>入门</li>
-</ol>
-<ul>
+<h1 id="SQL语法"><a href="#SQL语法" class="headerlink" title="SQL语法"></a>SQL语法</h1><h2 id="入门语句"><a href="#入门语句" class="headerlink" title="入门语句"></a>入门语句</h2><ul>
 <li>连接服务器 ：<code>mysql -u 用户名 -p 密码</code>                     </li>
 <li>查看所有库： <code>show database</code></li>
 <li>选库语句：<code>use 库名</code>；</li>
@@ -487,14 +475,11 @@
 <li>查询语句：<code>select * from stu</code>；</li>
 <li>清空表数据：<code>truncate stu</code>；</li>
 </ul>
-<ol start="2">
-<li>增删改查(基本)</li>
-</ol>
-<ul>
-<li><p>建表：CREATE语句</p>
+<h2 id="增删改查-基本"><a href="#增删改查-基本" class="headerlink" title="增删改查(基本)"></a>增删改查(基本)</h2><ul>
+<li><p>1.建表：CREATE语句</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE `test`.`class` (</span><br><span class="line">`id` int(255) NOT NULL AUTO_INCREMENT,</span><br><span class="line">`sname` varchar(10) CHARACTER SET utf8 NOT NULL DEFAULT &apos;&apos;,</span><br><span class="line">`gender` char(1) CHARACTER SET utf8 NOT NULL DEFAULT &apos;&apos;,</span><br><span class="line">`company` varchar(20) CHARACTER SET utf8 NOT NULL DEFAULT &apos;&apos;,</span><br><span class="line">`salary` decimal(6, 2) NOT NULL DEFAULT &apos;&apos;,</span><br><span class="line">`fanbu` smallint(20) NOT NULL DEFAULT &apos;&apos;,</span><br><span class="line">PRIMARY KEY (`id`)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>添加语句：INSERT语句</p>
+<li><p>2.添加语句：INSERT语句</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO `test`.`class`(`sname`, `gender`, `salary`, `fanbu`) VALUES (&apos;李四&apos;, &apos;男&apos;, 5000.00, 200)；</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -502,26 +487,32 @@
 <p>如果插入所有列，则可以不声明列名：INSERT INTO test.class VALUES (3,’zlatan’, ‘男’,’Blibli’ ,8000.00, 500);<br>注意：id虽然为自增型，但是插入的时候还是要写，或者写null占位；插入多行用逗号隔开；</p>
 </blockquote>
 <ul>
-<li>修改语句：UPDATE语句<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">update 表名 set 列1=新值，列2=新值 where id=4；</span><br><span class="line">UPDATE test.class SET fanbu=159 WHERE &apos;gender&apos;=&apos;男&apos; AND &apos;salary&apos;&gt;8000.00;</span><br></pre></td></tr></table></figure>
+<li>3.修改语句：UPDATE语句<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">update 表名 set 列1=新值，列2=新值 where id=4；</span><br><span class="line">UPDATE test.class SET fanbu=159 WHERE &apos;gender&apos;=&apos;男&apos; AND &apos;salary&apos;&gt;8000.00;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
 <p>where 表达式为真则执行生效，不一定为id，一定要加生效行，不然这一列全改了，问题很严重        </p>
 </blockquote>
 <ul>
-<li>删除语句：DELETE<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from class where salary&gt;8500</span><br></pre></td></tr></table></figure>
+<li>4.删除语句：DELETE<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from class where salary&gt;8500</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
 <p>删除是指删除整行</p>
 </blockquote>
 <ul>
-<li>查询语句：SELECT语句<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select sname,fanbu from class where id=3;  //取部分列，单行；</span><br><span class="line">select *from class //取所有行所有列，*代表所有列，表名后不加where条件，则选所有行；</span><br><span class="line">select sanme，fanbu from class //取部分列，所有行；</span><br></pre></td></tr></table></figure>
+<li>5.查询语句：SELECT语句<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select sname,fanbu from class where id=3;  //取部分列，单行；</span><br><span class="line">select *from class //取所有行所有列，*代表所有列，表名后不加where条件，则选所有行；</span><br><span class="line">select sanme，fanbu from class //取部分列，所有行；</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<ol start="3">
-<li>字段类型（建表用）<br><strong>列类型：不同的列类型，所占据的空间和效率是不一样的，主要讨论列类型的存储范围与占据字节的关系</strong></li>
-</ol>
+<h2 id="对列的操作-alter-table"><a href="#对列的操作-alter-table" class="headerlink" title="对列的操作(alter table)"></a>对列的操作(alter table)</h2><ul>
+<li>1.加一列在表的最后：<br><code>alter table 表名 add 列名称 列类型 列参数</code>；</li>
+<li>2.加一列在指定列后：<br><code>alter table 表名 add 列名称 列类型 列参数 after 某列</code>；</li>
+<li>3.加一列在表的最前面：<br><code>alter table 表名 add 列名称 列类型 列参数 first</code>；</li>
+<li>4.删除列：<br><code>alter table 表名 drop 列名</code>；</li>
+<li>5.修改列：<br><code>alter table 表名 modify 列名 列类型 列参数----------modify不能改列名，要用change</code>；</li>
+<li>6.修改列名和列参数：<br><code>alter table 表名 change 旧列名 新列名 列类型 列参数</code>；</li>
+</ul>
+<h2 id="字段类型（建表用）"><a href="#字段类型（建表用）" class="headerlink" title="字段类型（建表用）"></a>字段类型（建表用）</h2><p><strong>列类型：不同的列类型，所占据的空间和效率是不一样的，主要讨论列类型的存储范围与占据字节的关系</strong></p>
 <ul>
 <li>整型<br><img src="\images\localphoto\MySQL\int.png" alt="整数类型的存储和范围"><br>int系列声明时的参数<code>（M）、unsigned 、zeroFill</code><blockquote>
 <p>MySQL还支持选择在该类型关键字后面的括号内指定整数值的显示宽度(例如，INT(4))。该可选显示宽度规定用于显示宽度小于指定的列宽度的值时从左侧填满宽度。<br>显示宽度并不限制可以在列内保存的值的范围，也不限制超过列的指定宽度的值的显示。</p>
@@ -534,52 +525,681 @@
 <li>字符型<br><img src="\images\localphoto\MySQL\char.png" alt="字符类型的存储和范围"></li>
 <li>日期、时间类型<br><img src="\images\localphoto\MySQL\time.png" alt="日期类型的存储和范围"></li>
 </ul>
+<p>建表实战<br>社交网站会员表 member<br><img src="\images\localphoto\MySQL\createtb.png" alt="建表示例"></p>
 <hr>
-<ol start="4">
-<li>建表实战<br>社交网站会员表 member<br><img src="\images\localphoto\MySQL\createtb.png" alt="建表示例"></li>
-</ol>
-<hr>
-<h2 id="进阶语句"><a href="#进阶语句" class="headerlink" title="进阶语句"></a>进阶语句</h2><h3 id="对列的操作-alter-table"><a href="#对列的操作-alter-table" class="headerlink" title="对列的操作(alter table)"></a>对列的操作(alter table)</h3><ul>
-<li>加一列在表的最后：<br><code>alter table 表名 add 列名称 列类型 列参数</code>；</li>
-<li>加一列在指定列后：<br><code>alter table 表名 add 列名称 列类型 列参数 after 某列</code>；</li>
-<li>加一列在表的最前面：<br><code>alter table 表名 add 列名称 列类型 列参数 first</code>；</li>
-<li>删除列：<br><code>alter table 表名 drop 列名</code>；</li>
-<li>修改列：<br><code>alter table 表名 modify 列名 列类型 列参数----------modify不能改列名，要用change</code>；</li>
-<li>修改列名和列参数：<br><code>alter table 表名 change 旧列名 新列名 列类型 列参数</code>；<h3 id="查询语句-select"><a href="#查询语句-select" class="headerlink" title="查询语句(select)"></a>查询语句(select)</h3></li>
-</ul>
-<ol>
-<li>查询模型：</li>
-</ol>
-<ul>
+<h2 id="查询进阶"><a href="#查询进阶" class="headerlink" title="查询进阶"></a>查询进阶</h2><h3 id="查询模型："><a href="#查询模型：" class="headerlink" title="查询模型："></a>查询模型：</h3><ul>
 <li>列看成变量，where后面跟的是表达式，定位到列，一行一行的匹配判断，表达式为真则执行</li>
 <li>既然是变量，就可以进行计算，即意味着可以组合成新的列进行查询显示</li>
 </ul>
-<ol start="2">
-<li>进阶查询</li>
-</ol>
-<ul>
+<h3 id="进阶查询"><a href="#进阶查询" class="headerlink" title="进阶查询"></a>进阶查询</h3><ul>
 <li>where条件查询</li>
 <li>group by 分组</li>
 <li>having 筛选</li>
 <li>order by 排序</li>
 <li>limit 限制结果条数</li>
 </ul>
-<ol start="3">
-<li>实战中练习<br>商品表：goods<br>字段：Goods_id、Cat_id、Goods_sn、Click_count、Goods_number、Market_price、Shop_price、Add_time、Is_best、Is_new、Is_hot<br><strong>把其他表的数据（shop.goods）插入到本表中(test.goods)</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Insert into test.goods select Goods_id,Cat_id,Goods_sn,Click_count,Goods_number,Market_price,Shop_price,add_time,is_best,is_new,is_hot from shop.goods</span><br></pre></td></tr></table></figure>
+<h3 id="where查询"><a href="#where查询" class="headerlink" title="where查询"></a>where查询</h3><p>商品表：goods</p>
+<p>字段：Goods_id、Cat_id、Goods_sn、Click_count、Goods_number、Market_price、Shop_price、Add_time、Is_best、Is_new、Is_hot</p>
+<p><strong>把其他表的数据（shop.goods）插入到本表中(test.goods)</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Insert into test.goods select Goods_id,Cat_id,Goods_sn,Click_count,Goods_number,Market_price,Shop_price,add_time,is_best,is_new,is_hot from shop.goods</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>1.1、查询商品主键为32的商品；</li>
+</ul>
+<p><code>Select goods_id,goods_name,shop_price from goods where goods_id=32;</code></p>
+<ul>
+<li>1.2、不属于第3栏目的所有商品；</li>
+</ul>
+<p><code>Select goods_id,cat_id,goods_number from goods where cat_id !=3;   !=等价于&lt;&gt;</code></p>
+<ul>
+<li>1.3、本店价格高于和等于3000的商品；</li>
+</ul>
+<p><code>Select goods_id,goods_name,shop_price from goods where Shop_price&gt;=3000;</code></p>
+<ul>
+<li>1.4、取出第4栏目和第11栏目的商品；</li>
+</ul>
+<p><code>Select goods_id,goods_name,shop_price from goods where cat_id in (4,11); //cat_id在4，11这个集合里都满足</code></p>
+<ul>
+<li>1.4.1、取出不属于第3栏目且不属于第11栏目的商品；</li>
+</ul>
+<p><code>Select goods_id,goods_name,shop_price from goods where cat_id not in (3,11);</code><br><code>Select goods_id,goods_name,shop_price from goods where cat_id !=3 and cat_id !=11 ;</code></p>
+<ul>
+<li>1.5、取出价格在100到500之间的商品；</li>
+</ul>
+<p><code>Select goods_id,goods_name,shop_price from goods where Shop_price between 100 and 500；</code></p>
+<ul>
+<li>1.6、取出价格大于100且小于300，或者大于4000且小于5000的商品；</li>
+</ul>
+<p><code>Select goods_id,goods_name,shop_price from goods where shop_price&gt;100 and shop_price&lt;300 or shop_price&gt;4000 and shop_price&lt;5000;  //and优先级比or高</code></p>
+<ul>
+<li>1.7、取出第3个栏目下价格小于1000或者大于3000，同时点击量大于等于5的商品；</li>
+</ul>
+<p><code>Select goods_id,goods_name,shop_price,click_count from goods where cat_id=3 and (shop_price&lt;1000 or shop_price&gt;3000) and click_count&gt;=5;</code></p>
+<ul>
+<li>1.8、查出以“诺基亚”开头的商品；#模糊查询；</li>
+</ul>
+<p><code>Select goods_id,goods_name,shop_price,click_count from goods where goods_name like &#39;诺基亚%&#39;;    //其中“%”能取出任意字符，“_”匹配单一字符</code><br><code>Select goods_id,goods_name,shop_price,click_count from goods where goods_name like &#39;诺基亚N__&#39;;  //查出诺基亚N加两个字符的商品</code></p>
+<ul>
+<li>1.9、查出本店价格比市场价格的差值；</li>
+</ul>
+<p><code>Select goods_id,goods_name,market_price-shop_price from goods;</code><br><code>Select goods_id,goods_name,(market_price-shop_price) as discount from goods;  //以discount 显示</code><br><code>Select goods_id,goods_name,(market_price-shop_price) as discount from goods where (market_price-shop_price)&gt;200; //查出差值大于200商品，where后不能是discount</code></p>
+<p><strong>练习题：有如下表和数组，把num值处于[20,29]之间，改为20，num值处于[30,39]之间的，改为30；</strong></p>
+<pre><code>`把num当成变量看，num/10取整，再乘以10
+Update table set num=floor(num/10)*10 where num&gt;=20 and num&lt;=39;`
+</code></pre><h3 id="group与统计函数"><a href="#group与统计函数" class="headerlink" title="group与统计函数"></a>group与统计函数</h3><p>五个函数：max(求最大)、min(求最小)、sum(求和)、avg(求平均)、count(求总行数)</p>
+<ul>
+<li>1.10.查出最贵商品的价格</li>
+</ul>
+<p><code>select max(shop_price) from goods</code></p>
+<ul>
+<li>1.11.查出库存量是多少</li>
+</ul>
+<p><code>select sum(goods_number) from goods</code></p>
+<ul>
+<li>1.12.查出商品的平均价格</li>
+</ul>
+<p><code>select avg(shop_price) from goods</code></p>
+<ul>
+<li>1.13.查出总共有多少种商品</li>
+</ul>
+<p><code>select count(*) from goods</code>   哪怕所有字段都为null</p>
+<p><code>select count(字段) from goods</code> 字段不为null才计数</p>
+<p><strong>上面5个统计函数，单独使用，意义不大，要和group分组配合使用</strong></p>
+<ul>
+<li>1.14.第三个栏目下商品库存量</li>
+</ul>
+<p><code>select sum(goods_number) from goods where cat_id=3</code></p>
+<ul>
+<li>1.15.一次计算完，每个栏目下的库存之和</li>
+</ul>
+<p><code>select cat_id,sum(goods_number) from goods group by cat_id</code></p>
+<h3 id="having筛选-对结果集筛选"><a href="#having筛选-对结果集筛选" class="headerlink" title="having筛选(对结果集筛选)"></a>having筛选(对结果集筛选)</h3><p>对结果集筛选，因此要放到where、group by后面</p>
+<p><strong>语法：having 结果集中的列名 条件</strong></p>
+<ul>
+<li>1.16.查询每种商品所积压的货款（商品库存*价格）</li>
+</ul>
+<p><code>select goods_id,shop_price,goods_number,shop_price*goods_number as hk from goods</code></p>
+<ul>
+<li>1.17.查询积压的总货款</li>
+</ul>
+<p><code>select sum(shop_price*goods_number) from goods</code></p>
+<ul>
+<li>1.18.查询每个栏目下积压的货款</li>
+</ul>
+<p><code>select cat_id,sum(shop_price*goods_number) from goods group by cat_id</code></p>
+<ul>
+<li>1.19.查询积压货款超过2w的栏目，以及该栏目积压的货款</li>
+</ul>
+<p><code>select cat_id,sum(shop_price*goods_number) as hk from goods group by cat_id having hk&gt;20000</code></p>
+<ul>
+<li>1.20.查询本店价比市场价省的钱，其省钱大于200的商品</li>
+</ul>
+<p><code>select goods_id,market_price-shop_price as sq from goods having sq&gt;200</code></p>
+<ul>
+<li>1.21.有如下表:查询出2门及2门以上不及格的平均成绩</li>
+</ul>
+<p>即算出张三的平均成绩和李四的平均成绩</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>subject</th>
+<th>score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>张三</td>
+<td>数学</td>
+<td>90</td>
+</tr>
+<tr>
+<td>张三</td>
+<td>语文</td>
+<td>50                   </td>
+</tr>
+<tr>
+<td>张三</td>
+<td>地理</td>
+<td>40</td>
+</tr>
+<tr>
+<td>李四</td>
+<td>语文</td>
+<td>55</td>
+</tr>
+<tr>
+<td>李四</td>
+<td>政治</td>
+<td>45</td>
+</tr>
+<tr>
+<td>王五</td>
+<td>政治</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<p>a.先算出每个人的平均分</p>
+<p><code>select name,avg(score) from table group by name</code></p>
+<p>b.想办法统计出每个人的挂科情况</p>
+<p><code>select name,score&lt;60 as gk from table group by name</code></p>
+<p>c.整合a和b并筛选</p>
+<p><code>select name,avg(score),sum(score&lt;60) as gks from table group by name having gks&gt;=2</code></p>
+<h3 id="order-by-和-limit"><a href="#order-by-和-limit" class="headerlink" title="order by 和 limit"></a>order by 和 limit</h3><p>order by对结果集排序，因此要放到where、group、having后面</p>
+<p><strong>语法：order by 结果集中的列名 desc/asc</strong></p>
+<ul>
+<li>1.22.取第四栏目下的商品，并按价格由高到低排序</li>
+</ul>
+<p><code>select goods_id,goods_name,shop_price from goods where cat_id=4 order by shop_price desc</code></p>
+<ul>
+<li>1.23.按栏目升序排列，在栏目内部再按商品价格降序排列</li>
+</ul>
+<p><code>select goods_id,goods_name,shop_price from goods order by cat_id asc,shop price desc</code></p>
+<p>limit语句在最后，起到限制条目的作用</p>
+<p>语法：<code>limit[offset] N</code>     offset：偏移量（跳过几行）N:实际取出条数</p>
+<ul>
+<li>1.24.取第四栏目下的前10个商品，并按价格由高到低排序</li>
+</ul>
+<p><code>select goods_id,goods_name,shop_price from goods where cat_id=4 order by shop_price desc limit 10</code></p>
+<ul>
+<li>1.25.查询出本店价格最高的前三名</li>
+</ul>
+<p><code>select goods_id,goods_name,shop_price from goods order by shop_price desc limit 0,3</code></p>
+<ul>
+<li>1.26.查询出本店最高的 第三名到第五名 商品</li>
+</ul>
+<p><code>select goods_id,goods_name,shop_price from goods order by shop_price desc limit 2,3</code></p>
+<ul>
+<li>1.27.查询出每个栏目下id号最大的一条商品</li>
+</ul>
+<p>典型错误：<code>select goods_id,goods_name,shop_price,cat_id from goods group by cat_id order by goods_id desc limit 1</code></p>
+<p>错误原因：group时，MySQL是取每个分组下第一次出现的行</p>
+<p>正解：见下一个知识点（子查询）</p>
+<p><strong>子查询这5个语句是要严格按照 where-&gt;group by-&gt;having-&gt;order by-&gt;limit 的顺序采符合语法</strong></p>
+<h2 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h2><h3 id="where子查询"><a href="#where子查询" class="headerlink" title="where子查询"></a>where子查询</h3><p>把内层查询的结果作为外层查询的比较条件</p>
+<ul>
+<li>1.28.查出本网站最新的一条商品</li>
+</ul>
+<p><code>select goods_id,goods_name from goods order by goods_id desc limit 0,1</code></p>
+<ul>
+<li>1.29.查出本网站最新的一条商品,不用排序</li>
+</ul>
+<p><code>select goods_id,goods_name from goods where goods_id in (selcet max(goods_id) from goods)</code></p>
+<ul>
+<li>1.30.查询出每个栏目下最新的一条商品</li>
+</ul>
+<p><code>select goods_id,goods_name from goods where goods_id in (select max(cat_id) from goods group by cat_id)</code></p>
+<h3 id="from子查询"><a href="#from子查询" class="headerlink" title="from子查询"></a>from子查询</h3><p>查询结果集-结构上可以当成表-&gt;意味着可以再次查询<br>内层sql的查询结果，当成一张临时表，供外层sql再次查询。</p>
+<ul>
+<li>1.31.查询出每个栏目下最新的一条商品</li>
+</ul>
+<p><code>select * from (select goods_id,goods_name from goods order by cat_id asc,goods_id desc) as tmp group by cat_id</code></p>
+<h3 id="exits子查询"><a href="#exits子查询" class="headerlink" title="exits子查询"></a>exits子查询</h3><p>把外层子查询的结果，拿到内层sql去测试，如果内层sql成立，则改行取出</p>
+<ul>
+<li>1.32.查出有商品的栏目</li>
+</ul>
+<p>新建一张category表，只有cat_id和cat_name字段。</p>
+<p><code>select cat_id,cat_name from goods where exits(select * from goods where goods.cat_id=category.cat_id)</code></p>
+<h2 id="关于null"><a href="#关于null" class="headerlink" title="关于null"></a>关于null</h2><p>Q：建表时，列后面有 not null default ‘’/ default 0是什么意思？</p>
+<p>A：让这个列不为null，就算没填，也有默认值。</p>
+<p>Q：为什么不希望某个列的值为null呢？</p>
+<p>A:null是一种类型，null的比较需要专门用is null，is not null来比较</p>
+<p>  效率不高，影响索引效果</p>
+<h2 id="字段有关联的多表子查询"><a href="#字段有关联的多表子查询" class="headerlink" title="字段有关联的多表子查询"></a>字段有关联的多表子查询</h2><h3 id="左连接"><a href="#左连接" class="headerlink" title="左连接"></a>左连接</h3><p>表与集合的联系：<strong>一张表就是一个集合；每一行就是集合的一个元素。</strong></p>
+<p>两表做全相乘<br>从行的角度看：就是两表的每一行 两两组合<br>从列的角度看：结果集中的列，就是两表列名的相加</p>
+<p>可以选择性的选出想要查询的列名<br>在多表联查时，某一列名，在2张或2张以上表都有，则需要在列名前指定表名，即 表名.列名</p>
+<ul>
+<li>1.32 查询出所有商品的名称、<em>栏目类型</em>、库存、价格<br>用两表全相乘来查询</li>
+</ul>
+<p><code>select goods_id,goods_name,goods_number,shop_price,cat_name from goods,category where goods.cat_id=category.cat_id</code></p>
+<p>但是全相乘耗内存，也没用到索引，效率非常低</p>
+<p>左连接语法：假设A表在左边，B表在A表的右边滑动<br>A表与B表通过一个关系来筛选B表的行</p>
+<p><code>语法：A left join B on 条件</code> 形成的也是一个结果集，即可以<strong>看成一张表</strong></p>
+<p>条件为真，则B表对应的行取出</p>
+<p><code>select goods_id,goods_name,goods_number,shop_price,cat_name from goods left join category on goods.cat_id=category.cat_id</code></p>
+<ul>
+<li>1.32 取出第四个栏目下的商品，以及商品的栏目名</li>
+</ul>
+<p><code>select goods_id,cat_id，goods_name,cat_name from goods left join category on goods.cat_id=category.cat_id where goods.cat_id=4</code></p>
+<h3 id="左连接、右连接、内连接的区别"><a href="#左连接、右连接、内连接的区别" class="headerlink" title="左连接、右连接、内连接的区别"></a>左连接、右连接、内连接的区别</h3><ul>
+<li><p>内连接：组合两个表中的记录，返回关联字段相符的记录，也就是返回两个表的交集（阴影）部分。</p>
 </li>
-</ol>
-<p><strong><em> 基础查询where </em></strong><br>1.1、查询商品主键为32的商品；<br><code>Select goods_id,goods_name,shop_price from goods where goods_id=32;</code></p>
-<p>1.2、不属于第3栏目的所有商品；<br><code>Select goods_id,cat_id,goods_number from goods where cat_id !=3;   !=等价于&lt;&gt;</code></p>
-<p>1.3、本店价格高于和等于3000的商品；<br><code>Select goods_id,goods_name,shop_price from goods where Shop_price&gt;=3000;</code></p>
-<p>1.4、取出第4栏目和第11栏目的商品；<br><code>Select goods_id,goods_name,shop_price from goods where cat_id in (4,11); //cat_id在4，11这个集合里都满足</code></p>
-<p>1.4.1、取出不属于第3栏目且不属于第11栏目的商品；<br><code>Select goods_id,goods_name,shop_price from goods where cat_id not in (3,11);</code><br><code>Select goods_id,goods_name,shop_price from goods where cat_id !=3 and cat_id !=11 ;</code></p>
-<p>1.5、取出价格在100到500之间的商品；<br><code>Select goods_id,goods_name,shop_price from goods where Shop_price between 100 and 500；</code></p>
-<p>1.6、取出价格大于100且小于300，或者大于4000且小于5000的商品；<br><code>Select goods_id,goods_name,shop_price from goods where shop_price&gt;100 and shop_price&lt;300 or shop_price&gt;4000 and shop_price&lt;5000;  //and优先级比or高</code></p>
-<p>1.7、取出第3个栏目下价格小于1000或者大于3000，同时点击量大于等于5的商品；<br><code>Select goods_id,goods_name,shop_price,click_count from goods where cat_id=3 and (shop_price&lt;1000 or shop_price&gt;3000) and click_count&gt;=5;</code></p>
-<p>1.8、查出以“诺基亚”开头的商品；#模糊查询；<br><code>Select goods_id,goods_name,shop_price,click_count from goods where goods_name like &#39;诺基亚%&#39;;    //其中“%”能取出任意字符，“_”匹配单一字符</code><br><code>Select goods_id,goods_name,shop_price,click_count from goods where goods_name like &#39;诺基亚N__&#39;;  //查出诺基亚N加两个字符的商品</code></p>
-<p>1.9、查出本店价格比市场价格的差值；<br><code>Select goods_id,goods_name,market_price-shop_price from goods;</code><br><code>Select goods_id,goods_name,(market_price-shop_price) as discount from goods;  //以discount 显示</code><br><code>Select goods_id,goods_name,(market_price-shop_price) as discount from goods where (market_price-shop_price)&gt;200; //查出差值大于200商品，where后不能是discount</code></p>
-<p><strong>练习题：有如下表和数组，把num值处于[20,29]之间，改为20，num值处于[30,39]之间的，改为30；</strong><br>    <code>把num当成变量看，num/10取整，再乘以10
-    Update table set num=floor(num/10)*10 where num&gt;=20 and num&lt;=39;</code></p>
+<li><p>左连接：左(外)连接，左表的记录将会全部表示出来，而右表只会显示符合搜索条件的记录。右表记录不足的地方均为NULL。</p>
+</li>
+<li><p>右连接：与左(外)连接相反，右(外)连接，左表只会显示符合搜索条件的记录，而右表的记录将会全部表示出来。左表记录不足的地方均为NULL。</p>
+</li>
+</ul>
+<p>练习：有match表</p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>类型</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>matchID</td>
+<td>int</td>
+<td>主键</td>
+</tr>
+<tr>
+<td>hostTeamID</td>
+<td>int</td>
+<td>主队的ID</td>
+</tr>
+<tr>
+<td>guestTeamID</td>
+<td>int</td>
+<td>客队的ID</td>
+</tr>
+<tr>
+<td>matchResult</td>
+<td>varchar(20)</td>
+<td>比赛结果</td>
+</tr>
+<tr>
+<td>matchTime</td>
+<td>date</td>
+<td>比赛时间</td>
+</tr>
+</tbody>
+</table>
+<p>具体如下：m</p>
+<table>
+<thead>
+<tr>
+<th>mid</th>
+<th>hid</th>
+<th>gid</th>
+<th>mres</th>
+<th>matime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>2:0</td>
+<td>2019-04-13</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td>1:2</td>
+<td>2019-04-14</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>1</td>
+<td>2:5</td>
+<td>2019-04-15</td>
+</tr>
+<tr>
+<td>4</td>
+<td>2</td>
+<td>1</td>
+<td>3:2</td>
+<td>2019-04-16</td>
+</tr>
+</tbody>
+</table>
+<p>参赛队伍表team</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>字段类型</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>teamID</td>
+<td>int</td>
+<td>主键</td>
+</tr>
+<tr>
+<td>teamName</td>
+<td>varchar(20)</td>
+<td>队伍名称</td>
+</tr>
+</tbody>
+</table>
+<p>具体如下：t</p>
+<table>
+<thead>
+<tr>
+<th>tid</th>
+<th>tname</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>国安</td>
+</tr>
+<tr>
+<td>2</td>
+<td>申花</td>
+</tr>
+<tr>
+<td>3</td>
+<td>卓尔</td>
+</tr>
+</tbody>
+</table>
+<p>要求取出比赛结果，显示出队名。如：<code>国安 2:0 申花 2019-05-23</code></p>
+<p>1.<code>select hid,tname,mres,gid,matime from m left join t on m.hid=t.tid</code></p>
+<p>结果如下：</p>
+<table>
+<thead>
+<tr>
+<th>hid</th>
+<th>tname</th>
+<th>mres</th>
+<th>gid</th>
+<th>matime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>国安</td>
+<td>2:0</td>
+<td>2</td>
+<td>2019-04-13</td>
+</tr>
+<tr>
+<td>2</td>
+<td>申花</td>
+<td>1:2</td>
+<td>3</td>
+<td>2019-04-14</td>
+</tr>
+<tr>
+<td>3</td>
+<td>卓尔</td>
+<td>2:5</td>
+<td>1</td>
+<td>2019-04-15</td>
+</tr>
+<tr>
+<td>2</td>
+<td>申花</td>
+<td>3:2</td>
+<td>1</td>
+<td>2019-04-16</td>
+</tr>
+</tbody>
+</table>
+<p>2.<code>select hid,t1.tname,mres,gid,t2.tname,matime from m left join t as t1 on m.hid=t1.tid left join t as t2 on m.gid=t2.tid</code></p>
+<p>结果如下：</p>
+<table>
+<thead>
+<tr>
+<th>hid</th>
+<th>tname</th>
+<th>mres</th>
+<th>gid</th>
+<th>tname</th>
+<th>matime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>国安</td>
+<td>2:0</td>
+<td>2</td>
+<td>申花</td>
+<td>2019-04-13</td>
+</tr>
+<tr>
+<td>2</td>
+<td>申花</td>
+<td>1:2</td>
+<td>3</td>
+<td>卓尔</td>
+<td>2019-04-14</td>
+</tr>
+<tr>
+<td>3</td>
+<td>卓尔</td>
+<td>2:5</td>
+<td>1</td>
+<td>国安</td>
+<td>2019-04-15</td>
+</tr>
+<tr>
+<td>2</td>
+<td>申花</td>
+<td>3:2</td>
+<td>1</td>
+<td>国安</td>
+<td>2019-04-16</td>
+</tr>
+</tbody>
+</table>
+<p>总结：把这张表需要的字段选出来即可。连了两次，三表联查</p>
+<h3 id="union"><a href="#union" class="headerlink" title="union"></a>union</h3><p>union查询就是把2条或者多条sql语句的查询结果，合并成一个结果集。</p>
+<ul>
+<li><p>Q: 取自于2张表,通过”别名”让2个结果集的列一致。那么,如果取出的结果集,列名字不一样,还能否union?</p>
+</li>
+<li><p>A: 可以,而且取出的最终列名,以第1条sql为准.</p>
+</li>
+<li><p>Q: union满足什么条件就可以用了?</p>
+</li>
+<li><p>A: 只要结果集中的列数一致就可以.（如都是2列或者N列）。</p>
+</li>
+<li><p>Q: 如果Union后的结果有重复(即某2行,或N行,所有的列,值都一样),怎么办?</p>
+</li>
+<li><p>A:默认去重，如不想去重，用union all。</p>
+</li>
+</ul>
+<p>练习：有如下两张表：num_a和num_b表</p>
+<p>num_a表</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>num</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>5</td>
+</tr>
+<tr>
+<td>b</td>
+<td>10</td>
+</tr>
+<tr>
+<td>c</td>
+<td>15</td>
+</tr>
+<tr>
+<td>d</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<p>num_b表</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>num</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>b</td>
+<td>5</td>
+</tr>
+<tr>
+<td>c</td>
+<td>15</td>
+</tr>
+<tr>
+<td>d</td>
+<td>25</td>
+</tr>
+<tr>
+<td>e</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<p>1.<code>SELECT id,num FROM num_a UNION SELECT id, num FROM num_b</code></p>
+<p>结果如下：会去掉重复的行c-15</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>num</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>5</td>
+</tr>
+<tr>
+<td>b</td>
+<td>10</td>
+</tr>
+<tr>
+<td>c</td>
+<td>15</td>
+</tr>
+<tr>
+<td>d</td>
+<td>10</td>
+</tr>
+<tr>
+<td>b</td>
+<td>5</td>
+</tr>
+<tr>
+<td>d</td>
+<td>25</td>
+</tr>
+<tr>
+<td>e</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<p>2.UNION ALL不会过滤重复的行:<code>SELECT id,num FROM num_a UNION ALL SELECT id, num FROM num_b</code></p>
+<p>3.order by对union后的结果集排序:<code>SELECT id,num FROM num_a UNION SELECT id, num FROM num_b ORDER BY num DESC</code></p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>num</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>e</td>
+<td>30</td>
+</tr>
+<tr>
+<td>d</td>
+<td>25</td>
+</tr>
+<tr>
+<td>c</td>
+<td>15</td>
+</tr>
+<tr>
+<td>b</td>
+<td>10</td>
+</tr>
+<tr>
+<td>d</td>
+<td>10</td>
+</tr>
+<tr>
+<td>a</td>
+<td>5</td>
+</tr>
+<tr>
+<td>b</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>4.把num_a和num_b不同的索引结果保留,相同的索引结果相加,然后输出：如下结果</strong></p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>num</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>5</td>
+</tr>
+<tr>
+<td>b</td>
+<td>15</td>
+</tr>
+<tr>
+<td>c</td>
+<td>30</td>
+</tr>
+<tr>
+<td>d</td>
+<td>35</td>
+</tr>
+<tr>
+<td>e</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<p>分组统计union后的表：<code>select id,sum(num) as num from (select id,num from num_a union all select id,num from num_b) group by id</code></p>
+<h2 id="MySQL中的函数"><a href="#MySQL中的函数" class="headerlink" title="MySQL中的函数"></a>MySQL中的函数</h2><ul>
+<li>数学函数</li>
+<li>字符串函数</li>
+<li>日期和时间函数</li>
+<li>条件判断函数</li>
+<li>系统信息函数</li>
+<li>加密函数</li>
+<li>格式化函数</li>
+</ul>
+<p><a href="https://www.cnblogs.com/kissdodog/p/4168721.html" target="_blank" rel="noopener">参考地址</a></p>
+<p>注意：</p>
+<ul>
+<li>MySQL函数肯定是要影响查询速度，应该在建表时，通过合理的表结构减少函数的使用。</li>
+<li>数据库最好只做简单的数据插入和查询操作等操作，逻辑运算由应用程序来做。</li>
+<li>最大的弊端;针对某列查询，而此列用了函数，则此列不再使用索引。</li>
+</ul>
+<h2 id="视图view"><a href="#视图view" class="headerlink" title="视图view"></a>视图view</h2><p>在查询中，经常把查询结果当成表来看，如果一个结果集频繁用到，则可以用view，看成一张虚拟表，是表通过运算得到的一个投影。</p>
+<h3 id="视图的作用"><a href="#视图的作用" class="headerlink" title="视图的作用"></a>视图的作用</h3><ul>
+<li>简化查询：比如复杂的查询，先用视图生成一个中间结果，再查询视图</li>
+<li>更精细的权限控制：比如有些字段不想开放权限</li>
+<li>数据多，分表用</li>
+</ul>
+<h3 id="创建视图的语法"><a href="#创建视图的语法" class="headerlink" title="创建视图的语法"></a>创建视图的语法</h3><p>Q：如何创建视图，建视图的时候，需要指定视图的列名与列类型吗？</p>
+<p>A：不需要，它是个影子，继承了上面的字段，只是一种关系。</p>
+<p>示例：<code>create view 视图名 as select 语句</code></p>
+<h3 id="表与视图数据变化时相互影响问题"><a href="#表与视图数据变化时相互影响问题" class="headerlink" title="表与视图数据变化时相互影响问题"></a>表与视图数据变化时相互影响问题</h3><ul>
+<li><p>表的数据变化会影响到视图</p>
+</li>
+<li><p>大多数情况下视图的值不能更改</p>
+</li>
+<li><p>视图数据变化会影响到表：视图的数据和表的数据是一一对应</p>
+</li>
+</ul>
 
       
     </div>
@@ -794,7 +1414,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -856,7 +1476,19 @@ var jiathis_config={
                   </li>
                 
                   <li class="links-of-blogroll-item">
+                    <a href="https://www.yuque.com/yuanma/bilibili/yneqbl" title="Java源码解析合集" target="_blank">Java源码解析合集</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://ps8u7p2no.bkt.clouddn.com/MySQL_5.1_zh.chm" title="MySQL用户文档" target="_blank">MySQL用户文档</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
                     <a href="https://www.easyicon.net/" title="Icon库" target="_blank">Icon库</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.91sotu.com/" title="搜图导航" target="_blank">搜图导航</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
@@ -886,7 +1518,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库简介"><span class="nav-number">1.</span> <span class="nav-text">数据库简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库语法"><span class="nav-number">2.</span> <span class="nav-text">数据库语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本语句"><span class="nav-number">2.1.</span> <span class="nav-text">基本语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进阶语句"><span class="nav-number">2.2.</span> <span class="nav-text">进阶语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对列的操作-alter-table"><span class="nav-number">2.2.1.</span> <span class="nav-text">对列的操作(alter table)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询语句-select"><span class="nav-number">2.2.2.</span> <span class="nav-text">查询语句(select)</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库简介"><span class="nav-number">1.</span> <span class="nav-text">数据库简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL语法"><span class="nav-number">2.</span> <span class="nav-text">SQL语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#入门语句"><span class="nav-number">2.1.</span> <span class="nav-text">入门语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#增删改查-基本"><span class="nav-number">2.2.</span> <span class="nav-text">增删改查(基本)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对列的操作-alter-table"><span class="nav-number">2.3.</span> <span class="nav-text">对列的操作(alter table)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字段类型（建表用）"><span class="nav-number">2.4.</span> <span class="nav-text">字段类型（建表用）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查询进阶"><span class="nav-number">2.5.</span> <span class="nav-text">查询进阶</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查询模型："><span class="nav-number">2.5.1.</span> <span class="nav-text">查询模型：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进阶查询"><span class="nav-number">2.5.2.</span> <span class="nav-text">进阶查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#where查询"><span class="nav-number">2.5.3.</span> <span class="nav-text">where查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#group与统计函数"><span class="nav-number">2.5.4.</span> <span class="nav-text">group与统计函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#having筛选-对结果集筛选"><span class="nav-number">2.5.5.</span> <span class="nav-text">having筛选(对结果集筛选)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#order-by-和-limit"><span class="nav-number">2.5.6.</span> <span class="nav-text">order by 和 limit</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子查询"><span class="nav-number">2.6.</span> <span class="nav-text">子查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#where子查询"><span class="nav-number">2.6.1.</span> <span class="nav-text">where子查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#from子查询"><span class="nav-number">2.6.2.</span> <span class="nav-text">from子查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#exits子查询"><span class="nav-number">2.6.3.</span> <span class="nav-text">exits子查询</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于null"><span class="nav-number">2.7.</span> <span class="nav-text">关于null</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字段有关联的多表子查询"><span class="nav-number">2.8.</span> <span class="nav-text">字段有关联的多表子查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#左连接"><span class="nav-number">2.8.1.</span> <span class="nav-text">左连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#左连接、右连接、内连接的区别"><span class="nav-number">2.8.2.</span> <span class="nav-text">左连接、右连接、内连接的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#union"><span class="nav-number">2.8.3.</span> <span class="nav-text">union</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL中的函数"><span class="nav-number">2.9.</span> <span class="nav-text">MySQL中的函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#视图view"><span class="nav-number">2.10.</span> <span class="nav-text">视图view</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#视图的作用"><span class="nav-number">2.10.1.</span> <span class="nav-text">视图的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建视图的语法"><span class="nav-number">2.10.2.</span> <span class="nav-text">创建视图的语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表与视图数据变化时相互影响问题"><span class="nav-number">2.10.3.</span> <span class="nav-text">表与视图数据变化时相互影响问题</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -920,7 +1552,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">12.8k</span>
+    <span title="Site words total count">15.6k</span>
   
 </div>
 
