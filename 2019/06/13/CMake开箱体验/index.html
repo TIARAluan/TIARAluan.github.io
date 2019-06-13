@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="向辉-介绍两下自己">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/articletop/cmake.jpg">
-<meta property="og:updated_time" content="2019-06-13T04:09:47.956Z">
+<meta property="og:updated_time" content="2019-06-13T04:17:34.539Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CMake开箱体验">
 <meta name="twitter:image" content="http://yoursite.com/images/articletop/cmake.jpg">
@@ -346,7 +346,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-13T12:09:47+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-13T12:17:34+08:00">
                 2019-06-13
               </time>
             
@@ -445,17 +445,16 @@
 <li>执行命令 <code>cmake PATH</code>或者 <code>ccmake PATH</code> 生成 Makefile 。其中，PATH 是 CMakeLists.txt 所在的目录;</li>
 <li>使用<code>make</code>命令进行编译。</li>
 </ol>
+<hr>
 <h1 id="入门案例"><a href="#入门案例" class="headerlink" title="入门案例"></a>入门案例</h1><h2 id="单个源文件"><a href="#单个源文件" class="headerlink" title="单个源文件"></a>单个源文件</h2><p>假设现在有个项目<strong>Demo1</strong>。<br>对于简单的项目，只需要写几行代码就可以了。例如，假设现在我们的Demo1项目中只有一个源文件 main.cpp</p>
-<ol>
-<li>编写 CMakeLists.txt </li>
-</ol>
+<font color="#FF0000">1.编写 CMakeLists.txt</font>
+
 <p>CMakeLists.txt 的语法比较简单，由命令、注释和空格组成，其中命令是不区分大小写的。符号 # 后面的内容被认为是注释。命令由命令名称、小括号和参数组成，参数之间使用空格进行间隔。</p>
 <p>在main.cpp同目录下新建一个CMakeLists.txt文件，编写如下内容:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># CMake 最低版本号要求</span><br><span class="line">cmake_minimum_required (VERSION 2.8)</span><br><span class="line"># 项目信息</span><br><span class="line">project (Demo1)</span><br><span class="line"># 指定生成目标</span><br><span class="line">add_executable(Demo main.cc)</span><br></pre></td></tr></table></figure>
 <p>说明：add_executable： 将名为 main.cc 的源文件编译成一个名称为 Demo 的可执行文件。</p>
-<ol start="2">
-<li>编译项目</li>
-</ol>
+<font color="#FF0000">2.编译项目</font>
+
 <p>在当前目录执行 <code>cmake .</code>，得到 Makefile 后再使用<code>make</code>命令编译得到一个名为 Demo 的可执行文件。</p>
 <h2 id="多个源文件"><a href="#多个源文件" class="headerlink" title="多个源文件"></a>多个源文件</h2><h3 id="同一目录，多个源文件"><a href="#同一目录，多个源文件" class="headerlink" title="同一目录，多个源文件"></a>同一目录，多个源文件</h3><p>假设现在有个项目<strong>Demo2</strong>。<br>项目结构如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">./Demo2</span><br><span class="line">    |</span><br><span class="line">    +--- main.cpp</span><br><span class="line">    |</span><br><span class="line">    +--- MathFunctions.cpp</span><br><span class="line">    |</span><br><span class="line">    +--- MathFunctions.h</span><br></pre></td></tr></table></figure></p>
 <p>这时的 CMakeLists.txt 如下:</p>
