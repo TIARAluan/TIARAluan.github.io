@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="向辉-介绍两下自己">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/articletop/libtorch.jpg">
-<meta property="og:updated_time" content="2019-06-20T13:27:56.368Z">
+<meta property="og:updated_time" content="2019-06-20T13:37:04.776Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows下部署PyTorch的C++端(LibTorch)">
 <meta name="twitter:image" content="http://yoursite.com/images/articletop/libtorch.jpg">
@@ -346,7 +346,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-20T21:27:56+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-20T21:37:04+08:00">
                 2019-06-20
               </time>
             
@@ -396,7 +396,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  824
+                  825
                 </span>
               
 
@@ -441,10 +441,9 @@
 - OpenCV
 - Visual Studio 2017
 </code></pre><h1 id="部署步骤"><a href="#部署步骤" class="headerlink" title="部署步骤"></a>部署步骤</h1><h2 id="1-CMake构建项目"><a href="#1-CMake构建项目" class="headerlink" title="1.CMake构建项目"></a>1.CMake构建项目</h2><ol>
-<li><p>新建一个文件夹<code>libTorchDemo</code>,在该文件夹下新建<code>CMakeLists.txt</code>和<code>main.cpp</code>文件，目录结构大概如下：<br> · libTorchDemo</p>
-<pre><code>—— CMakeLists.txt
-—— main.cpp
-</code></pre></li>
+<li><p>新建一个文件夹<code>libTorchDemo</code>,在该文件夹下新建<code>CMakeLists.txt</code>和<code>main.cpp</code>文件，目录结构大概如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- libTorchDemo</span><br><span class="line">   - CMakeLists.txt</span><br><span class="line">   - main.cpp</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>CMakeLists.txt中配置libtorch和opencv，路径根据自己的填，具体内容如下：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">cmake_minimum_required(VERSION <span class="number">3.12</span> FATAL_ERROR)</span><br><span class="line">project(LibtorchDemo)</span><br><span class="line"><span class="built_in">set</span>(CMAKE_PREFIX_PATH <span class="string">"E:\\Libtorch\\libtorch\\share\\cmake\\Torch"</span>;E:\\opencv\\opencv\\build\\x64\\vc15\\lib)</span><br><span class="line">find_package(Torch REQUIRED)</span><br><span class="line">find_package(OpenCV REQUIRED)</span><br><span class="line"><span class="keyword">if</span>(NOT Torch_FOUND)</span><br><span class="line">    message(FATAL_ERROR <span class="string">"Pytorch Not Found!"</span>)</span><br><span class="line">endif(NOT Torch_FOUND)</span><br><span class="line">message(STATUS <span class="string">"Pytorch status:"</span>)</span><br><span class="line">message(STATUS <span class="string">"    libraries: $&#123;TORCH_LIBRARIES&#125;"</span>)</span><br><span class="line">message(STATUS <span class="string">"OpenCV library status:"</span>)</span><br><span class="line">message(STATUS <span class="string">"    version: $&#123;OpenCV_VERSION&#125;"</span>)</span><br><span class="line">message(STATUS <span class="string">"    libraries: $&#123;OpenCV_LIBS&#125;"</span>)</span><br><span class="line">message(STATUS <span class="string">"    include path: $&#123;OpenCV_INCLUDE_DIRS&#125;"</span>)</span><br><span class="line">include_directories($&#123;OpenCV_INCLUDE_DIRS&#125;)</span><br><span class="line">add_executable(LibtorchDemo main.cpp)</span><br><span class="line">target_link_libraries(LibtorchDemo $&#123;TORCH_LIBRARIES&#125; $&#123;OpenCV_LIBS&#125;)</span><br><span class="line">set_property(TARGET LibtorchDemo PROPERTY CXX_STANDARD <span class="number">11</span>)</span><br></pre></td></tr></table></figure>
 </li>
