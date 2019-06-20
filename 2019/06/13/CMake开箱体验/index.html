@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="向辉-介绍两下自己">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/articletop/cmake.jpg">
-<meta property="og:updated_time" content="2019-06-13T04:17:34.539Z">
+<meta property="og:updated_time" content="2019-06-13T13:53:03.979Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CMake开箱体验">
 <meta name="twitter:image" content="http://yoursite.com/images/articletop/cmake.jpg">
@@ -346,7 +346,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-13T12:17:34+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-13T21:53:03+08:00">
                 2019-06-13
               </time>
             
@@ -396,7 +396,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1k
+                  1.2k
                 </span>
               
 
@@ -412,7 +412,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  4
                 </span>
               
             </div>
@@ -445,17 +445,17 @@
 <li>执行命令 <code>cmake PATH</code>或者 <code>ccmake PATH</code> 生成 Makefile 。其中，PATH 是 CMakeLists.txt 所在的目录;</li>
 <li>使用<code>make</code>命令进行编译。</li>
 </ol>
-<hr>
-<h1 id="入门案例"><a href="#入门案例" class="headerlink" title="入门案例"></a>入门案例</h1><h2 id="单个源文件"><a href="#单个源文件" class="headerlink" title="单个源文件"></a>单个源文件</h2><p>假设现在有个项目<strong>Demo1</strong>。<br>对于简单的项目，只需要写几行代码就可以了。例如，假设现在我们的Demo1项目中只有一个源文件 main.cpp</p>
+<p>注：在Windows平台下编译使用如下命令：<br><code>cmake --build .</code>(Debug版本)</p>
+<h2 id="cmake-build-config-Release-Release版本"><a href="#cmake-build-config-Release-Release版本" class="headerlink" title="cmake --build . --config Release(Release版本)"></a><code>cmake --build . --config Release</code>(Release版本)</h2><h1 id="入门案例"><a href="#入门案例" class="headerlink" title="入门案例"></a>入门案例</h1><h2 id="单个源文件"><a href="#单个源文件" class="headerlink" title="单个源文件"></a>单个源文件</h2><p>假设现在有个项目<strong>Demo1</strong>。<br>对于简单的项目，只需要写几行代码就可以了。例如，假设现在我们的Demo1项目中只有一个源文件 main.cpp</p>
 <font color="#FF0000">1.编写 CMakeLists.txt</font>
 
 <p>CMakeLists.txt 的语法比较简单，由命令、注释和空格组成，其中命令是不区分大小写的。符号 # 后面的内容被认为是注释。命令由命令名称、小括号和参数组成，参数之间使用空格进行间隔。</p>
 <p>在main.cpp同目录下新建一个CMakeLists.txt文件，编写如下内容:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># CMake 最低版本号要求</span><br><span class="line">cmake_minimum_required (VERSION 2.8)</span><br><span class="line"># 项目信息</span><br><span class="line">project (Demo1)</span><br><span class="line"># 指定生成目标</span><br><span class="line">add_executable(Demo main.cc)</span><br></pre></td></tr></table></figure>
-<p>说明：add_executable： 将名为 main.cc 的源文件编译成一个名称为 Demo 的可执行文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># CMake 最低版本号要求</span><br><span class="line">cmake_minimum_required (VERSION 2.8)</span><br><span class="line"># 项目信息</span><br><span class="line">project (Demo1)</span><br><span class="line"># 指定生成目标</span><br><span class="line">add_executable(Demo main.cpp)</span><br></pre></td></tr></table></figure>
+<p>说明：add_executable： 将名为 main.cpp 的源文件编译成一个名称为 Demo 的可执行文件。</p>
 <font color="#FF0000">2.编译项目</font>
 
-<p>在当前目录执行 <code>cmake .</code>，得到 Makefile 后再使用<code>make</code>命令编译得到一个名为 Demo 的可执行文件。</p>
+<p>在当前目录执行 <code>cmake .</code>，得到 Makefile 后再使用<code>make</code>(win平台下用cmake –build)命令编译得到一个名为 Demo 的可执行文件。</p>
 <h2 id="多个源文件"><a href="#多个源文件" class="headerlink" title="多个源文件"></a>多个源文件</h2><h3 id="同一目录，多个源文件"><a href="#同一目录，多个源文件" class="headerlink" title="同一目录，多个源文件"></a>同一目录，多个源文件</h3><p>假设现在有个项目<strong>Demo2</strong>。<br>项目结构如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">./Demo2</span><br><span class="line">    |</span><br><span class="line">    +--- main.cpp</span><br><span class="line">    |</span><br><span class="line">    +--- MathFunctions.cpp</span><br><span class="line">    |</span><br><span class="line">    +--- MathFunctions.h</span><br></pre></td></tr></table></figure></p>
 <p>这时的 CMakeLists.txt 如下:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># CMake 最低版本号要求</span><br><span class="line">cmake_minimum_required (VERSION 2.8)</span><br><span class="line"># 项目信息</span><br><span class="line">project (Demo2)</span><br><span class="line"># 指定生成目标</span><br><span class="line">add_executable(Demo main.cpp MathFunctions.cpp)</span><br></pre></td></tr></table></figure>
@@ -472,6 +472,11 @@
 <p>子目录中的 CMakeLists.txt：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 查找当前目录下的所有源文件</span><br><span class="line"># 并将名称保存到 DIR_LIB_SRCS 变量</span><br><span class="line">aux_source_directory(. DIR_LIB_SRCS)</span><br><span class="line"># 生成链接库</span><br><span class="line">add_library (MathFunctions $&#123;DIR_LIB_SRCS&#125;)</span><br></pre></td></tr></table></figure>
 <p>在该文件中使用命令<code>add_library</code>将 src 目录中的源文件编译为静态链接库。</p>
+<h1 id="其他常用命令"><a href="#其他常用命令" class="headerlink" title="其他常用命令"></a>其他常用命令</h1><h2 id="添加版本号"><a href="#添加版本号" class="headerlink" title="添加版本号"></a>添加版本号</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set (Demo1_VERSION_MAJOR 1)</span><br><span class="line">set (Demo1_VERSION_MINOR 0)</span><br></pre></td></tr></table></figure>
+<h2 id="设置include文件"><a href="#设置include文件" class="headerlink" title="设置include文件"></a>设置include文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">INCLUDE_DIRECTORIES(</span><br><span class="line">$&#123;OPENCV_INCLUDE_DIR&#125;</span><br><span class="line">$&#123;PROJECT_SOURCE_DIRECTORY&#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h2 id="设置lib-文件"><a href="#设置lib-文件" class="headerlink" title="设置lib 文件"></a>设置lib 文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">link_directories($&#123;OpenCV_LIBRARY_DIR&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="查找是否安装了OpenCV"><a href="#查找是否安装了OpenCV" class="headerlink" title="查找是否安装了OpenCV"></a>查找是否安装了OpenCV</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">FIND_PACKAGE(OpenCV REQUIRED )</span><br><span class="line">IF($&#123;OpenCV_VERSION&#125; VERSION_LESS 3.4.5)</span><br><span class="line">    MESSGAE(FATAL_ERROR “OPENCV version is not compatible: $&#123;OpenCV_VERSION&#125;&quot;)</span><br><span class="line">ENDIF()</span><br></pre></td></tr></table></figure>
+<h2 id="配置opencv"><a href="#配置opencv" class="headerlink" title="配置opencv"></a>配置opencv</h2><p>前提是opencv的环境变量设置好<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">find_package(OpenCV REQUIRED)</span><br><span class="line">include_directories($&#123;OpenCV_INCLUDE_DIRS&#125;)</span><br><span class="line">target_link_libraries(Demo $&#123;OpenCV_LIBS&#125;)</span><br><span class="line">Demo是你项目要生成的exe或者动态库名字</span><br></pre></td></tr></table></figure></p>
 <p>参考：<a href="https://www.hahack.com/codes/cmake/" target="_blank" rel="noopener">CMake入门实战</a></p>
 
       
@@ -566,6 +571,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/20/Windows下部署PyTorch的C-LibTorch/" rel="prev" title="Windows下部署PyTorch的C++端(LibTorch)">
+                Windows下部署PyTorch的C++端(LibTorch) <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -670,7 +679,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -681,7 +690,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -692,7 +701,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -785,7 +794,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#CMake是什么"><span class="nav-number"></span> <span class="nav-text">CMake是什么</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#怎么用"><span class="nav-number"></span> <span class="nav-text">怎么用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#入门案例"><span class="nav-number"></span> <span class="nav-text">入门案例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单个源文件"><span class="nav-number">1.</span> <span class="nav-text">单个源文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多个源文件"><span class="nav-number">2.</span> <span class="nav-text">多个源文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#同一目录，多个源文件"><span class="nav-number">2.1.</span> <span class="nav-text">同一目录，多个源文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多个目录，多个源文件"><span class="nav-number">2.2.</span> <span class="nav-text">多个目录，多个源文件</span></a></li></ol></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#CMake是什么"><span class="nav-number"></span> <span class="nav-text">CMake是什么</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#怎么用"><span class="nav-number"></span> <span class="nav-text">怎么用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#cmake-build-config-Release-Release版本"><span class="nav-number">1.</span> <span class="nav-text">cmake --build . --config Release(Release版本)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#入门案例"><span class="nav-number"></span> <span class="nav-text">入门案例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单个源文件"><span class="nav-number">1.</span> <span class="nav-text">单个源文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多个源文件"><span class="nav-number">2.</span> <span class="nav-text">多个源文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#同一目录，多个源文件"><span class="nav-number">2.1.</span> <span class="nav-text">同一目录，多个源文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多个目录，多个源文件"><span class="nav-number">2.2.</span> <span class="nav-text">多个目录，多个源文件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他常用命令"><span class="nav-number"></span> <span class="nav-text">其他常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加版本号"><span class="nav-number">1.</span> <span class="nav-text">添加版本号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置include文件"><span class="nav-number">2.</span> <span class="nav-text">设置include文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置lib-文件"><span class="nav-number">3.</span> <span class="nav-text">设置lib 文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查找是否安装了OpenCV"><span class="nav-number">4.</span> <span class="nav-text">查找是否安装了OpenCV</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置opencv"><span class="nav-number">5.</span> <span class="nav-text">配置opencv</span></a></li></ol></li></div>
             
 
           </div>
@@ -819,7 +828,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">16.5k</span>
+    <span title="Site words total count">17.5k</span>
   
 </div>
 
