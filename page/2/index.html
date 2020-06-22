@@ -301,7 +301,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/28/十大经典排序算法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/22/05-排序算法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Arnold-luan">
@@ -320,7 +320,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/05/28/十大经典排序算法/" itemprop="url">十大经典排序算法</a></h1>
+                <a class="post-title-link" href="/2020/06/22/05-排序算法/" itemprop="url">未命名</a></h1>
         
 
         <div class="post-meta">
@@ -332,8 +332,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-28T19:44:00+08:00">
-                2019-05-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-22T11:56:57+08:00">
+                2020-06-22
               </time>
             
 
@@ -348,34 +348,12 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-11T17:09:01+08:00">
-                2019-06-11
+              <time title="更新于" itemprop="dateModified" datetime="2020-06-09T15:08:54+08:00">
+                2020-06-09
               </time>
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -398,7 +376,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  5.8k
+                  3.5k
                 </span>
               
 
@@ -414,7 +392,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  25
+                  15
                 </span>
               
             </div>
@@ -436,14 +414,164 @@
 
       
         
-          <p><img src="\images\articletop\sort.jpg" alt></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/05/28/十大经典排序算法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><p><a href="https://arnold-xiang.github.io/2019/05/28/%E5%8D%81%E5%A4%A7%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/#more" target="_blank" rel="noopener">十大排序算法</a>介绍</p>
+<p><img src="C:\Users\Arnold\AppData\Roaming\Typora\typora-user-images\image-20200604215415486.png" alt="image-20200604215415486"></p>
+<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><ul>
+<li><p>基本思想：</p>
+<p>通过对待排序序列从前向后(从下标较小的元素开始)，<code>依次比较相邻元素的值，若发现逆序则交换，使值较大的元素逐渐从前移向后部</code>，就象水底下的气泡一样逐渐向上冒。   </p>
+</li>
+<li><p>优化:</p>
+<p>因为排序的过程中，各元素不断接近自己的位置，<code>如果一趟比较下来没有进行过交换,就说明序列有序</code>，因此要在排序过程中设置一个标志flag判断元素是否进行过交换。从而减少不必要的比较。</p>
+</li>
+<li><p>示意图：</p>
+</li>
+</ul>
+<p><img src="C:\Users\Arnold\AppData\Roaming\Typora\typora-user-images\image-20200602221622511.png" alt="image-20200602221622511"></p>
+<blockquote>
+<ol>
+<li>一共进行 数组大小-1 趟过程，每一趟都找到一个最大的数放在最后</li>
+<li>每一趟比较的次数在逐渐减小</li>
+<li>如果我们发现在某趟排序中，没有发生一次交换，可以提前结束冒泡排序（优化）</li>
+</ol>
+</blockquote>
+<ul>
+<li>代码实现</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BubbleSort</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] array = &#123;<span class="number">3</span>, <span class="number">0</span>, -<span class="number">3</span>, -<span class="number">1</span>, <span class="number">10</span>, <span class="number">7</span>&#125;;</span><br><span class="line">        sort(array);</span><br><span class="line">        System.out.println(Arrays.toString(array));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span>[] array)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> temp = <span class="number">0</span>;             <span class="comment">// 临时变量，交换数据位置用</span></span><br><span class="line">        <span class="keyword">boolean</span> flag = <span class="keyword">false</span>;     <span class="comment">// 标识变量，每一趟是有逆序，进行了位置交换</span></span><br><span class="line">        <span class="comment">// 1. 总共需要 array.length-1 趟比较</span></span><br><span class="line">        <span class="comment">// 2. 每一趟依次需要比较 array.length-1，array.length-1-1，array.length-1-2，.... 次</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; array.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; array.length - <span class="number">1</span> - i; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (array[j] &gt; array[j + <span class="number">1</span>]) &#123;</span><br><span class="line">                    <span class="comment">// flag置为true</span></span><br><span class="line">                    flag = <span class="keyword">true</span>;</span><br><span class="line">                    <span class="comment">// 逆序则交换位置</span></span><br><span class="line">                    temp = array[j];</span><br><span class="line">                    array[j] = array[j + <span class="number">1</span>];</span><br><span class="line">                    array[j + <span class="number">1</span>] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 这一趟没有发生数据交换</span></span><br><span class="line">            <span class="keyword">if</span> (!flag) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                flag = <span class="keyword">false</span>; <span class="comment">// !!! 重置flag，进行下一次判断</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>时间复杂度：O(n^2)</li>
+</ul>
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><ul>
+<li><p>基本思想：</p>
+<p>选择排序(select sorting)也是一种简单的排序方法。它的基本思想是：第一次从arr[0]~arr[n-I]中选取最小值，与rr[0]交换，第二次从arr[1]~arr[n-1]中选取最小值，与arr[1]交换，第三次从rr[2]ar[n-1]中选取最小值，与arr[2]交换，.，第i次从ar[i-1]~arr[n-1]中选取最小值，与arr[-1]交换，..第n-1次从ar[n-2]~arr[n-1]中选取最小值，与arr[n-2]交换，总共通过n-1次，得到一个按排序码从小到大排列的有序序列。</p>
+</li>
+<li><p>示意图：</p>
+</li>
+</ul>
+<p><img src="C:\Users\Arnold\AppData\Roaming\Typora\typora-user-images\image-20200603172337543.png" alt="image-20200603172337543"></p>
+<blockquote>
+<ol>
+<li><p>一共进行 数组大小-1 轮排序</p>
+</li>
+<li><p>每一轮都找到一个最小的数放在当前待排序数组的最前面</p>
+</li>
+</ol>
+</blockquote>
+<ul>
+<li>代码实现</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SelectSort</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] array = &#123;<span class="number">20</span>, -<span class="number">2</span>, <span class="number">6</span>, <span class="number">30</span>, -<span class="number">5</span>, <span class="number">1</span>&#125;;</span><br><span class="line">        sort(array);</span><br><span class="line">        System.out.println(Arrays.toString(array));</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span>[] array)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 1. 共进行array.length-1 轮排序</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; array.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">            <span class="comment">// 假定最小值为待排序数组的第一个值</span></span><br><span class="line">            <span class="keyword">int</span> minIndex = i;     <span class="comment">// 最小值的索引</span></span><br><span class="line">            <span class="comment">// 2. 每一轮比较 array.length-1-i次</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; array.length; j++) &#123;</span><br><span class="line">                <span class="comment">// 找到最小的数对应的索引</span></span><br><span class="line">                <span class="keyword">if</span> (array[minIndex] &gt; array[j]) &#123;</span><br><span class="line">                    minIndex = j;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 交换位置:array[i]&lt;---&gt;array[minIndex]</span></span><br><span class="line">            <span class="keyword">if</span> (minIndex != i) &#123;</span><br><span class="line">                <span class="keyword">int</span> temp = array[i];</span><br><span class="line">                array[i] = array[minIndex];</span><br><span class="line">                array[minIndex] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><ul>
+<li><p>基本思想：</p>
+<p>把n个待排序的元素<code>看成为一个有序表和-一个无序表</code>，开始时有序表中只包含一一个元素，无序表中包含有n-1个元素，排序过程中每次从无序表中取出第一个元素，把它的排序码依次与有序表元素的排序码进行比较，将它插入到有序表中的适当位置，使之成为新的有序表。</p>
+</li>
+</ul>
+<blockquote>
+<p>原理类似打扑克牌时将手上的牌按顺序码好</p>
+</blockquote>
+<ul>
+<li>示意图：</li>
+</ul>
+<p><img src="C:\Users\Arnold\AppData\Roaming\Typora\typora-user-images\image-20200603230236053.png" alt="image-20200603230236053"></p>
+<blockquote>
+<ol>
+<li>将待排序序列第一个元素看做一个有序序列，把第二个元素到最后一个元素当成是未排序序列。</li>
+<li>从头到尾依次扫描未排序序列，将扫描到的每个元素插入有序序列的适当位置。（如果待插入的元素与有序序列中的某个元素相等，则将待插入元素插入到相等元素的后面）- </li>
+</ol>
+</blockquote>
+<ul>
+<li>代码实现</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InsertSort</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] array=&#123;<span class="number">20</span>,-<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">30</span>,-<span class="number">4</span>&#125;;</span><br><span class="line">        sort(array);</span><br><span class="line">        System.out.println(Arrays.toString(array));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span>[] array)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;array.length ; i++) &#123;</span><br><span class="line">            <span class="comment">// &#123;20,-1,3,2,30,-4&#125; ---&gt; &#123;-1,20,3,2,30,-4&#125; ---&gt; &#123;-1,3,20,2,30,-4&#125;</span></span><br><span class="line">            <span class="keyword">int</span> insertValue=array[i];   <span class="comment">// 待插入的数</span></span><br><span class="line">            <span class="keyword">int</span> insertIndex=i-<span class="number">1</span>;        <span class="comment">// 待插入的数的前一个数</span></span><br><span class="line">            <span class="comment">// 在有序列表中找到自己的位置</span></span><br><span class="line">            <span class="comment">// 1. insertIndex&gt;=0保证不越界</span></span><br><span class="line">            <span class="comment">// 2. array[insertIndex]&gt; insertValue说明还没有找到自己的位置</span></span><br><span class="line">            <span class="comment">// 3. 需要将array[insertIndex]后移</span></span><br><span class="line">            <span class="keyword">while</span> (insertIndex&gt;=<span class="number">0</span> &amp;&amp; array[insertIndex]&gt; insertValue)&#123;</span><br><span class="line">                array[insertIndex+<span class="number">1</span>]=array[insertIndex];</span><br><span class="line">                insertIndex--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 找到位置：insertIndex+1 ，插入进去</span></span><br><span class="line">            array[insertIndex+<span class="number">1</span>]=insertValue;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h2><ul>
+<li><p>基本思想：</p>
+<blockquote>
+<p><code>简单的插入排序可能存在的问题</code>：<br>数组arr= {2,3,4,5,6,1}这时需要插入的数1(最小), 这样的过程是:<br>{2,3,4.5,6.6}</p>
+<p>{2,3,4,5,5,6}</p>
+<p>{2,3,4,4,5,6}</p>
+<p>{2,3,3,4,5,6}</p>
+<p>{2,2,3,4,5,6}</p>
+<p>{1,2,3,4,5,6}</p>
+<p>结论：<code>当需要插入的数是较小的数时，后移的次数明显增多，对效率有影响</code>.</p>
+</blockquote>
+<p>先将整个待排序的记录序列<strong>分割成为若干子序列分别进行直接插入排序</strong>，待整个序列中的记录“基本有序”时，再对全体记录进行依次直接插入排序。</p>
+</li>
+<li><p>示意图：</p>
+</li>
+</ul>
+<p><img src="C:\Users\Arnold\AppData\Roaming\Typora\typora-user-images\image-20200604175943465.png" alt="image-20200604175943465"></p>
+<ul>
+<li>代码实现：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ShellSort</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] array = &#123;<span class="number">8</span>, <span class="number">9</span>, <span class="number">1</span>, <span class="number">7</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">0</span>&#125;;</span><br><span class="line">        sort(array);</span><br><span class="line">        System.out.println(Arrays.toString(array));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span>[] array)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 推导</span></span><br><span class="line">        <span class="comment">// &#123;8, 9, 1, 7, 2, 3, 5, 4, 6, 0&#125;</span></span><br><span class="line">        <span class="comment">// 第一次整合</span></span><br><span class="line">      <span class="comment">/*  for (int i = 5; i &lt; array.length; i++) &#123;</span></span><br><span class="line"><span class="comment">            int j = i;</span></span><br><span class="line"><span class="comment">            int temp = array[j];                // 待插入的元素array[5]</span></span><br><span class="line"><span class="comment">            if (array[j] &lt; array[j - 5]) &#123;      // array[5]&lt;array[0]</span></span><br><span class="line"><span class="comment">                // 移动找位置</span></span><br><span class="line"><span class="comment">                while (j - 5 &gt;= 0 &amp;&amp; temp &lt; array[j - 5]) &#123;</span></span><br><span class="line"><span class="comment">                    array[j] = array[j - 5];</span></span><br><span class="line"><span class="comment">                    j -= 5;</span></span><br><span class="line"><span class="comment">                &#125;</span></span><br><span class="line"><span class="comment">                // 退出while循环后找到了位置，将要插入的元素插入到此位置</span></span><br><span class="line"><span class="comment">                array[j] = temp;</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">        System.out.println("第一次排序后：" + Arrays.toString(array));</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">        <span class="comment">// 增量gap，并逐步缩小增量</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> gap = array.length / <span class="number">2</span>; gap &gt; <span class="number">0</span>; gap /= <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="comment">// 依次对每个分组进行直接插入排序</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = gap; i &lt; array.length; i++) &#123;</span><br><span class="line">                <span class="keyword">int</span> j = i;</span><br><span class="line">                <span class="keyword">int</span> temp = array[j];                <span class="comment">// 待插入的元素array[5]</span></span><br><span class="line">                <span class="keyword">if</span> (array[j] &lt; array[j - gap]) &#123;      <span class="comment">// array[5]&lt;array[0]</span></span><br><span class="line">                    <span class="comment">// 移动找位置</span></span><br><span class="line">                    <span class="keyword">while</span> (j - gap &gt;= <span class="number">0</span> &amp;&amp; temp &lt; array[j - gap]) &#123;</span><br><span class="line">                        array[j] = array[j - gap];</span><br><span class="line">                        j -= gap;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="comment">// 退出while循环后找到了位置，将要插入的元素插入到此位置</span></span><br><span class="line">                    array[j] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><ul>
+<li><p>基本思想：</p>
+<ol>
+<li><p>在数组中选一个基准数（通常为数组第一个）；</p>
+</li>
+<li><p>将数组中小于基准数的数据移到基准数左边，大于基准数的移到右边；</p>
+</li>
+<li><p>对于基准数左、右两边的数组，不断重复以上两个过程，直到每个子集只有一个元素，即为全部有序</p>
+</li>
+</ol>
+</li>
+<li><p>示意图：</p>
+</li>
+</ul>
+<p><img src="C:\Users\Arnold\AppData\Roaming\Typora\typora-user-images\image-20200606115156391.png" alt="image-20200606115156391"></p>
+<ul>
+<li>代码实现：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.arnold.sort;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">QuickSort</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] array = &#123;-<span class="number">9</span>, <span class="number">78</span>, <span class="number">0</span>, <span class="number">23</span>, -<span class="number">567</span>, <span class="number">70</span>&#125;;</span><br><span class="line">        sort(array, <span class="number">0</span>, array.length - <span class="number">1</span>);</span><br><span class="line">        System.out.println(Arrays.toString(array));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> array 待排序数组</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> left  区间的最左边</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> right 区间的最右边</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span>[] array, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//如果区间不只一个数</span></span><br><span class="line">        <span class="keyword">if</span> (left &lt; right) &#123;</span><br><span class="line">            <span class="keyword">int</span> pivot = array[left];     <span class="comment">// 将区间的第一个数作为基准</span></span><br><span class="line">            <span class="keyword">int</span> i = left;               <span class="comment">// 从左往右进行查找的索引，指向当前区间的最左边</span></span><br><span class="line">            <span class="keyword">int</span> j = right;              <span class="comment">// 从右往左进行查找的索引，指向当前区间的最右边</span></span><br><span class="line">            <span class="comment">// 遍历对区间按照基准排序</span></span><br><span class="line">            <span class="keyword">while</span> (i &lt; j) &#123;</span><br><span class="line">                <span class="comment">// (一)、从右向左查找</span></span><br><span class="line">                <span class="comment">// 当右边的数大于基准数时，略过，继续向左查找：array[j]&gt;pivot</span></span><br><span class="line">                <span class="keyword">while</span> (i &lt; j &amp;&amp; array[j] &gt; pivot) &#123;</span><br><span class="line">                    j--;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// 跳出循环时，此时的j对应的元素是小于基准元素的，将j对应的元素填充到此时i对应的位置</span></span><br><span class="line">                array[i] = array[j];</span><br><span class="line">                <span class="comment">// (二)、从左向右查找</span></span><br><span class="line">                <span class="comment">// 当左边的数小于基准数时，略过，继续向右查找：array[i]&lt;pivot</span></span><br><span class="line">                <span class="keyword">while</span> (i &lt; j &amp;&amp; array[i] &lt; pivot) &#123;</span><br><span class="line">                    i++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// 跳出循环时，此时的i对应的元素是大于基准元素的，将i对应的元素填充到此时j对应的位置</span></span><br><span class="line">                array[j] = array[i];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 跳出循环时：i=j，此时再将基准元素插入到i和j重合的位置上</span></span><br><span class="line">            array[i] = pivot;</span><br><span class="line">            <span class="comment">// 对基准左边元素递归分区排序</span></span><br><span class="line">            sort(array, left, right - <span class="number">1</span>);</span><br><span class="line">            <span class="comment">// 对基准右边元素递归分区排序</span></span><br><span class="line">            sort(array, left + <span class="number">1</span>, right);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>在java.util.Arrays.sort中，<code>基本类型数组</code>排序所使用的算法就是归并算法</p>
+</blockquote>
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><ul>
+<li><p>基本思想：</p>
+<ol>
+<li>将n个元素从中间切开，分成两部分。（左边可能比右边多1个数）</li>
+<li>将步骤1分成的两部分，再分别进行递归分解。直到所有部分的元素个数都为1。</li>
+<li>从最底层开始逐步合并两个排好序的数列。</li>
+</ol>
+</li>
+<li><p>示意图：</p>
+</li>
+</ul>
+<p><img src="C:\Users\Arnold\AppData\Roaming\Typora\typora-user-images\image-20200606122402400.png" alt="image-20200606122402400"></p>
+<ul>
+<li><p>如何归并：如何将两个有序数列合并成一个有序数列？</p>
+<p>由于两个数列都已经有序，我们只需从两个数列的低位轮番拿出各自最小的数来PK就就行了，输的一方为小值，将这个值放入临时数列，然后输的一方继续拿出一个值来PK，直至有一方没有元素后，将另一方的所有元素依次接在临时数列后面即可。此时，临时数列为两个数列的有序合并</p>
+</li>
+</ul>
+<p><img src="C:\Users\Arnold\AppData\Roaming\Typora\typora-user-images\image-20200606122653416.png" alt="image-20200606122653416"></p>
+<ul>
+<li>代码实现：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MergeSort</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] array = &#123;<span class="number">8</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">2</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span>[] temp = <span class="keyword">new</span> <span class="keyword">int</span>[array.length];</span><br><span class="line">        sort(array, <span class="number">0</span>, array.length - <span class="number">1</span>, temp);</span><br><span class="line">        System.out.println(Arrays.toString(array));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span>[] array, <span class="keyword">int</span> left, <span class="keyword">int</span> right, <span class="keyword">int</span>[] temp)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (left &lt; right) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = (left + right) / <span class="number">2</span>;</span><br><span class="line">            <span class="comment">// 向左递归分解</span></span><br><span class="line">            sort(array, left, mid, temp);</span><br><span class="line">            <span class="comment">// 向右递归分解</span></span><br><span class="line">            sort(array, mid + <span class="number">1</span>, right, temp);</span><br><span class="line">            <span class="comment">// 合并有序序列</span></span><br><span class="line">            merge(array, left, right, mid, temp);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 合并的方法</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> array 待合并数组</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> left  左边有序序列的初始索引</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> right 右边有序序列的初始索引</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> mid   左边和右边的中间索引</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> temp  中转数组</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span>[] array, <span class="keyword">int</span> left, <span class="keyword">int</span> right, <span class="keyword">int</span> mid, <span class="keyword">int</span>[] temp)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = left;       <span class="comment">// 第一组的起点i</span></span><br><span class="line">        <span class="keyword">int</span> j = mid + <span class="number">1</span>;    <span class="comment">// 第二组的起点j，mid=(left+right)/2</span></span><br><span class="line">        <span class="keyword">int</span> t = <span class="number">0</span>;          <span class="comment">// 中转数组的索引t</span></span><br><span class="line">        <span class="comment">// (一)、把左右两边的有序序列按照规则填充到temp数组</span></span><br><span class="line">        <span class="comment">// 直到左右两边的序列有一个序列处理完毕</span></span><br><span class="line">        <span class="keyword">while</span> (i &lt;= mid &amp;&amp; j &lt;= right) &#123;</span><br><span class="line">            <span class="comment">// 如果左边元素小于对应右边元素，则将左边元素填充到temp数组</span></span><br><span class="line">            <span class="keyword">if</span> (array[i] &lt;= array[j]) &#123;</span><br><span class="line">                temp[t] = array[i];</span><br><span class="line">                t++;</span><br><span class="line">                i++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                temp[t] = array[j];</span><br><span class="line">                t++;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// (二)、把有剩余序列的剩余元素依次填充到temp数组</span></span><br><span class="line">        <span class="comment">// 左边有剩余</span></span><br><span class="line">        <span class="keyword">while</span> (i &lt;= mid) &#123;</span><br><span class="line">            temp[t] = array[i];</span><br><span class="line">            t++;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 右边有剩余</span></span><br><span class="line">        <span class="keyword">while</span> (j &lt;= right) &#123;</span><br><span class="line">            temp[t] = array[j];</span><br><span class="line">            t++;</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// (三)、把temp数组拷贝到array（并不是每次都拷贝所有）</span></span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; t; i++) &#123;<span class="comment">// 将排好序的数填回到array数组的对应位置</span></span><br><span class="line">            array[left + i] = temp[i];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>在java.util.Arrays.sort中，<code>对象数组</code>排序所使用的算法就是归并算法</p>
+</blockquote>
+<h2 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h2><p>1)、 基数排序(radixsort) 属于“分配式排序”(distributionsort) ，又称“桶子法”(bucket sort) 或binsort， 顾名思义，它是通过键值的各个位的值，将要排序的元素分配至某些“桶”中，达到排序的作用</p>
+<p>2)、基数排序法是属于稳定性的排序，基数排序法的是效率高的稳定性排序法</p>
+<p>3)、基数排序(Radix Sort)是桶排序的扩展</p>
+<ul>
+<li><p>基本思想：</p>
+<p>将所有待比较数值统一为同样的数位长度，数位较短的数前面补零。然后，从最低位开始，依次进行一次排序。  这样从最低位排序一直到最高位排序完成以后，数列就变成一个有序序列。</p>
+</li>
+<li><p>示意图：</p>
+</li>
+</ul>
+<p><img src="C:\Users\Arnold\AppData\Roaming\Typora\typora-user-images\image-20200606163311669.png" alt="image-20200606163311669"></p>
+<p><img src="C:\Users\Arnold\AppData\Roaming\Typora\typora-user-images\image-20200606163344884.png" alt="image-20200606163344884"></p>
+<ul>
+<li>代码实现：</li>
+</ul>
+<p>获取最大数的位数： <code>int maxLength = (max + &quot;&quot;).length();</code></p>
+<p>取出个位数（n=1）、十位数（n=10）、….：<code>int digitValue = value / n % 10；</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RadixSort</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] array = &#123;<span class="number">53</span>, <span class="number">3</span>, <span class="number">542</span>, <span class="number">748</span>, <span class="number">14</span>, <span class="number">214</span>&#125;;</span><br><span class="line">        sort(array);</span><br><span class="line">        System.out.println(Arrays.toString(array));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span>[] array)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 获取当前数组的最大数</span></span><br><span class="line">        <span class="keyword">int</span> max = array[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; array.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (array[i] &gt; max) &#123;</span><br><span class="line">                max = array[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 获取最大数的位数</span></span><br><span class="line">        <span class="keyword">int</span> maxLength = (max + <span class="string">""</span>).length();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, n = <span class="number">1</span>; i &lt; maxLength; i++, n *= <span class="number">10</span>) &#123;</span><br><span class="line">            <span class="comment">// 定义一个二维数组：表示10个桶，每个桶里有一个一位数组存放该桶的元素</span></span><br><span class="line">            <span class="comment">// 每个桶里有一个一位数组的长度不确定，最坏情况下为数组的长度（都排在了一个桶里）</span></span><br><span class="line">            <span class="keyword">int</span>[][] bucket = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>][array.length];</span><br><span class="line">            <span class="comment">// 定义一个一位数组：表示每个桶存放的元素的个数</span></span><br><span class="line">            <span class="comment">// 示例：bucketElementsCounts[0]表示bucket[0]桶里存放的数据的个数</span></span><br><span class="line">            <span class="keyword">int</span>[] bucketElementsCounts = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line">            <span class="comment">// 对每个元素的个位进行排序</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; array.length; j++) &#123;</span><br><span class="line">                <span class="comment">// 取出个位数</span></span><br><span class="line">                <span class="keyword">int</span> digitOfElements = array[j] / n % <span class="number">10</span>;    <span class="comment">// 53%10=3; 542/100%10=5</span></span><br><span class="line">                <span class="comment">// 放入到对应的桶中</span></span><br><span class="line">                bucket[digitOfElements][bucketElementsCounts[digitOfElements]] = array[j];</span><br><span class="line">                bucketElementsCounts[digitOfElements]++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 将每个桶里的元素依次取出放入到array数组中</span></span><br><span class="line">            <span class="keyword">int</span> index = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; <span class="number">10</span>; k++) &#123;</span><br><span class="line">                <span class="comment">// 如果桶里有元素就取出</span></span><br><span class="line">                <span class="keyword">if</span> (bucketElementsCounts[k] != <span class="number">0</span>) &#123;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> l = <span class="number">0</span>; l &lt; bucketElementsCounts[k]; l++) &#123;</span><br><span class="line">                        array[index++] = bucket[k][l];</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
         
       
     </div>
@@ -492,7 +620,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/26/Java面试基础/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/22/04-递归/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Arnold-luan">
@@ -511,7 +639,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/05/26/Java面试基础/" itemprop="url">Java面试基础</a></h1>
+                <a class="post-title-link" href="/2020/06/22/04-递归/" itemprop="url">未命名</a></h1>
         
 
         <div class="post-meta">
@@ -523,8 +651,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-26T22:01:30+08:00">
-                2019-05-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-22T11:56:57+08:00">
+                2020-06-22
               </time>
             
 
@@ -539,34 +667,12 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-11T17:35:53+08:00">
-                2019-06-11
+              <time title="更新于" itemprop="dateModified" datetime="2020-06-01T22:39:13+08:00">
+                2020-06-01
               </time>
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/面试/" itemprop="url" rel="index">
-                    <span itemprop="name">面试</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -589,7 +695,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.5k
+                  1.8k
                 </span>
               
 
@@ -605,7 +711,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  9
+                  7
                 </span>
               
             </div>
@@ -627,14 +733,64 @@
 
       
         
-          <p><img src="/images/articletop/interview.jpg" alt></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/05/26/Java面试基础/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><h2 id="递归的概念"><a href="#递归的概念" class="headerlink" title="递归的概念"></a>递归的概念</h2><p> 简单的说：递归就是<code>方法自己调用自己</code>，<code>每次调用时传入不同的变量</code>；递归有助于编程者解决复杂的问题，同时<br>可以让代码变得简洁。</p>
+<h2 id="递归调用机制案例"><a href="#递归调用机制案例" class="headerlink" title="递归调用机制案例"></a>递归调用机制案例</h2><p><strong>递归调用规则：</strong></p>
+<ul>
+<li>当程序执行到一个方法时，就会开辟一个独立的空间（栈空间）</li>
+<li>每个栈空间的数据（局部变量）是独立的</li>
+</ul>
+<p><strong>案例：</strong></p>
+<ol>
+<li>打印问题</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RecursiveIllustration</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        test(<span class="number">4</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 1.打印问题</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n &gt; <span class="number">2</span>) &#123;</span><br><span class="line">            test(n - <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"n="</span> + n);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="C:\Users\Arnold\AppData\Roaming\Typora\typora-user-images\image-20200531130456190.png" alt="image-20200531130456190"></p>
+<ol start="2">
+<li>阶乘问题</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 2.阶乘问题</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">factorial</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">if</span> (n == <span class="number">1</span>) &#123;</span><br><span class="line">           <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">       &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">           <span class="keyword">return</span> factorial(n - <span class="number">1</span>) * n;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="C:\Users\Arnold\AppData\Roaming\Typora\typora-user-images\image-20200531153627133.png" alt="image-20200531153627133"></p>
+<h2 id="递归能解决的问题"><a href="#递归能解决的问题" class="headerlink" title="递归能解决的问题"></a>递归能解决的问题</h2><ol>
+<li>各种数学问题如:8皇后问题，汉诺塔，阶乘问题,迷宫问题，球和篮子的问题(google编程大赛)</li>
+<li>各种算法中也会使用到递归，比如快排，归并排序，二分查找，分治算法等.</li>
+<li>将用栈解决的问题–&gt;递归代码比较简洁</li>
+</ol>
+<h2 id="递归需要遵守的重要规则"><a href="#递归需要遵守的重要规则" class="headerlink" title="递归需要遵守的重要规则"></a>递归需要遵守的重要规则</h2><ol>
+<li>执行一个方法时，就创建一个新的受保护的独立空间(栈空间)</li>
+<li>方法的局部变量是独立的，不会相互影响，比如n变量</li>
+<li>如果方法中使用的是引用类型变量(比如数组)，就会共享该引用类型的数据.</li>
+<li>递归必须<code>向退出递归的条件逼近</code>，否则就是无限递归，出现StackOvrflowError，死归了:)</li>
+<li>当一个方法执行完毕，或者遇到return, 就会返回，遵守谁调用，就将结果返回给谁，同时当方法执行完毕或者返回时，该方法也就执行完毕</li>
+</ol>
+<h2 id="递归—迷宫问题"><a href="#递归—迷宫问题" class="headerlink" title="递归—迷宫问题"></a>递归—迷宫问题</h2><p><img src="C:\Users\Arnold\AppData\Roaming\Typora\typora-user-images\image-20200601092411715.png" alt="image-20200601092411715"></p>
+<p>问题描述：小球从某一点出发，找到能到达右下角位置的通路</p>
+<p>思路：</p>
+<ol>
+<li><em>创建迷宫—二维数组、1表示这个点是障碍物</em></li>
+<li><em>约定小球运动策略：上—&gt;右—&gt;下—&gt;左</em></li>
+<li><em>约定当某点 为 0 表示该点没有走过 ，当为 1 表示墙  ； 2 表示通路可以走 ； 3 表示该点已经走过，但是走不通</em></li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.arnold.recursive;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 迷宫问题</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Maze</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 创建迷宫</span></span><br><span class="line">        <span class="keyword">int</span>[][] map = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">8</span>][<span class="number">7</span>];</span><br><span class="line">        <span class="comment">// 设置障碍物</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">7</span>; i++) &#123;</span><br><span class="line">            map[<span class="number">0</span>][i] = <span class="number">1</span>;</span><br><span class="line">            map[<span class="number">7</span>][i] = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 左右全部置为1</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">8</span>; i++) &#123;</span><br><span class="line">            map[i][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">            map[i][<span class="number">6</span>] = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        map[<span class="number">3</span>][<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">        map[<span class="number">3</span>][<span class="number">2</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="comment">// 输出迷宫</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">8</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">7</span>; j++) &#123;</span><br><span class="line">                System.out.print(map[i][j] + <span class="string">" "</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">        findWay(map, <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">        System.out.println(<span class="string">"走过后的迷宫"</span>);</span><br><span class="line">        <span class="comment">// 输出迷宫</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">8</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">7</span>; j++) &#123;</span><br><span class="line">                System.out.print(map[i][j] + <span class="string">" "</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 按照上---&gt;右---&gt;下---&gt;左 策略找通路</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> map 地图</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> i   起始点坐标</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> j</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="comment">// 当某点 为 0 表示该点没有走过 ，当为 1 表示墙  ； 2 表示通路可以走 ； 3 表示该点已经走过，但是走不通</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">findWay</span><span class="params">(<span class="keyword">int</span>[][] map, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (map[<span class="number">6</span>][<span class="number">5</span>] == <span class="number">2</span>) &#123;                            <span class="comment">// 2 表示通路可以走</span></span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (map[i][j] == <span class="number">0</span>) &#123;                        <span class="comment">// 为 0 表示该点没有走过</span></span><br><span class="line">                map[i][j] = <span class="number">2</span>;                           <span class="comment">// 假定该点可以走通</span></span><br><span class="line">                <span class="keyword">if</span> (findWay(map, i + <span class="number">1</span>, j)) &#123;         <span class="comment">// 向下走</span></span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (findWay(map, i, j + <span class="number">1</span>)) &#123;  <span class="comment">// 向右走</span></span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (findWay(map, i - <span class="number">1</span>, j)) &#123;  <span class="comment">// 向下走</span></span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (findWay(map, i, j - <span class="number">1</span>)) &#123;  <span class="comment">// 向左走</span></span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    map[i][j] = <span class="number">3</span>;                       <span class="comment">// 3 表示该点已经走过，但是走不通</span></span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="八皇后问题"><a href="#八皇后问题" class="headerlink" title="八皇后问题"></a>八皇后问题</h2><p><img src="C:\Users\Arnold\AppData\Roaming\Typora\typora-user-images\image-20200601221404955.png" alt="image-20200601221404955"></p>
+<p>八皇后问题，是一个古老而著名的问题，是回溯算法的典型案例。该问题是国际西洋棋棋手马克斯.贝瑟尔于1848年提出：在8X8格的国际象棋上摆放八个皇后，使其不能互相攻击，即：<code>任意两个皇后都不能处于同一行、同-一列或同一斜线上，问有多少种摆法(92)</code>。</p>
+<ul>
+<li>思路</li>
+</ul>
+<ol>
+<li>第一个皇后先放第一行第一列</li>
+<li>第二个皇后放在第二行第一列、 然后判断是否OK，如果不OK， 继续放在第二列、第三列、依次把所有列都放完，找到一个合适</li>
+<li>继续第三个皇后，还是第一-列、第二列….直到第8个皇后也能放在一个不冲突的位置，算是找到了一个正确解</li>
+<li>当得到一个正确解时，在栈回退到上一个栈时，就会开始回溯，即将第一个皇后，放到第一列的所有正确解，全部得到.</li>
+<li>然后回头继续第一个皇后放第二列，后面继续循环执行1,2,3,4的步骤</li>
+<li>示意图:</li>
+</ol>
+<blockquote>
+<p>理论上应该创建一个二维数组来表示棋盘，但是实际上可以通过算法，用一个一维数组即可解决问题. arr[8]={0,4, 7,5, 2, 6, 1, 3} //对应arr下标表示第几行，即第几个皇后，arr[i]=val,val 表示第计1个皇后，放在第i+1行的第val+1列</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Queen8</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 有多少个皇后</span></span><br><span class="line">    <span class="keyword">int</span> max=<span class="number">8</span>;</span><br><span class="line">    <span class="comment">// 定义一个数组，保存皇后放置位置的结果,比如 arr = &#123;0 , 4, 7, 5, 2, 6, 1, 3&#125;</span></span><br><span class="line">    <span class="keyword">int</span>[] array=<span class="keyword">new</span> <span class="keyword">int</span>[max];</span><br><span class="line">    <span class="comment">// 解的个数</span></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 判断是否冲突的次数</span></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> judgeCount = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//测试一把 ， 8皇后是否正确</span></span><br><span class="line">        Queen8 queue8 = <span class="keyword">new</span> Queen8();</span><br><span class="line">        queue8.check(<span class="number">0</span>);</span><br><span class="line">        System.out.printf(<span class="string">"一共有%d解法"</span>, count);</span><br><span class="line">        System.out.println();</span><br><span class="line">        System.out.printf(<span class="string">"一共判断冲突的次数%d次"</span>, judgeCount); <span class="comment">// 1.5w</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 递归寻找解</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> n</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="comment">//特别注意： check 是 每一次递归时，进入到check中都有  for(int i = 0; i &lt; max; i++)，因此会有回溯</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n == max) &#123;  <span class="comment">//n = 8 , 其实8个皇后就既然放好</span></span><br><span class="line">            print();</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//依次放入皇后，并判断是否冲突</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; max; i++) &#123;</span><br><span class="line">            <span class="comment">//先把当前这个皇后 n , 放到该行的第1列</span></span><br><span class="line">            array[n] = i;</span><br><span class="line">            <span class="comment">//判断当放置第n个皇后到i列时，是否冲突</span></span><br><span class="line">            <span class="keyword">if</span>(judge(n)) &#123; <span class="comment">// 不冲突</span></span><br><span class="line">                <span class="comment">//接着放n+1个皇后,即开始递归</span></span><br><span class="line">                check(n+<span class="number">1</span>); <span class="comment">//</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//如果冲突，就继续执行 array[n] = i; 即将第n个皇后，放置在本行得 后移的一个位置</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 判断第n和n-1个皇后是否冲突</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> n 第几个皇后</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">judge</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">        judgeCount++;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;n ; i++) &#123;</span><br><span class="line">            <span class="comment">//1. array[i] == array[n]  表示判断 第n个皇后是否和前面的n-1个皇后在同一列</span></span><br><span class="line">            <span class="comment">//2. Math.abs(n-i) == Math.abs(array[n] - array[i]) 表示判断第n个皇后是否和第i皇后是否在同一斜线</span></span><br><span class="line">            <span class="comment">//3. 判断是否在同一行, 没有必要，n 每次都在递增</span></span><br><span class="line">            <span class="keyword">if</span> (array[i]==array[n] || Math.abs(n-i)==Math.abs(array[n]-array[i]))&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//写一个方法，可以将皇后摆放的位置输出</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        count++;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; array.length; i++) &#123;</span><br><span class="line">            System.out.print(array[i] + <span class="string">" "</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
         
       
     </div>
@@ -683,7 +839,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/26/MarkDownwn基本用法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/22/03-栈（Stack）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Arnold-luan">
@@ -702,7 +858,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/05/26/MarkDownwn基本用法/" itemprop="url">MarkDownwn基本用法</a></h1>
+                <a class="post-title-link" href="/2020/06/22/03-栈（Stack）/" itemprop="url">未命名</a></h1>
         
 
         <div class="post-meta">
@@ -714,8 +870,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-26T19:50:24+08:00">
-                2019-05-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-22T11:56:57+08:00">
+                2020-06-22
               </time>
             
 
@@ -730,34 +886,12 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-11T15:48:50+08:00">
-                2019-06-11
+              <time title="更新于" itemprop="dateModified" datetime="2020-05-30T09:46:51+08:00">
+                2020-05-30
               </time>
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -780,7 +914,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  483
+                  1.7k
                 </span>
               
 
@@ -796,7 +930,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  7
                 </span>
               
             </div>
@@ -818,17 +952,90 @@
 
       
         
-          <h1 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h1><p>md是一种标记语言，通过简单的标记语法，使得普通文本具有一定的格式。有专门的编辑器打开，但我使用的是VSCode，一款很强大的编辑器，必备工具。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/05/26/MarkDownwn基本用法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <h1 id="栈（Stack）"><a href="#栈（Stack）" class="headerlink" title="栈（Stack）"></a>栈（Stack）</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ol>
+<li>栈的英文为（stack）</li>
+<li>栈是一个<code>先入后出</code>（FILO-First In Last Out）的有序列表。</li>
+<li>栈（stack）是限制线性表中元素的插入和删除只能在线性表的同一端进行的一种特殊线性表。允许插入和删除的一端，为变化的一端，称为栈顶（Top），另一端为固定的一端，称为栈底（Bottom）。</li>
+<li>根据栈的定义可知，最先放入栈中元素在栈底，最后放入的元素在栈顶，而删除元素刚好相反，最后放入的元素最先删除，最先放入的元素最后删除</li>
+<li>图解方式说明出栈（pop）和入栈（push）的概念</li>
+</ol>
+<h2 id="栈的应用场景"><a href="#栈的应用场景" class="headerlink" title="栈的应用场景"></a>栈的应用场景</h2><ol>
+<li><code>子程序的调用</code>：在跳往子程序前，会先将下个指令的地址存到堆栈中，直到子程序执行完后再将地址取出，以回到原来的程序中。</li>
+<li><code>处理递归调用</code>：和子程序的调用类似，只是除了储存下一个指令的地址外，也将参数、区域变量等数据存入堆栈中。</li>
+<li>表达式的转换[<code>中缀表达式转后缀表达式</code>]与求值（实际解决）。</li>
+<li><code>二叉树的遍历</code>。</li>
+<li>图形的<code>深度优先</code>（depth-first）搜索法。</li>
+</ol>
+<h2 id="栈的快速入门"><a href="#栈的快速入门" class="headerlink" title="栈的快速入门"></a>栈的快速入门</h2><ol>
+<li>用数组模拟栈的使用，由于栈是一种有序列表，当然可以使用数组的结构来储存栈的数据内容，下面我们就用数组模拟栈的出栈，入栈等操作。</li>
+<li>实现思路分析，并画出示意图</li>
+</ol>
+<p><img src="C:\Users\Arnold\AppData\Roaming\Typora\typora-user-images\image-20200529161856190.png" alt="image-20200529161856190"></p>
+<blockquote>
+<ol>
+<li>定义一个top表示栈顶，初始化为-1</li>
+<li>入栈：当有数据加入时<ol>
+<li>top++</li>
+<li>stack[top]=value</li>
+</ol>
+</li>
+<li>出栈<ol>
+<li>value=stack[top]</li>
+<li>top–</li>
+</ol>
+</li>
+</ol>
+</blockquote>
+<ol start="3">
+<li>实现</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.arnold.stack;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Stack</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> maxSize;    <span class="comment">//数组（栈）的大小</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span>[] arrayStack;   <span class="comment">//数组模拟栈</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> top = -<span class="number">1</span>;    <span class="comment">//栈顶指针，初始化为-1</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 构造器</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Stack</span><span class="params">(<span class="keyword">int</span> maxSize)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.maxSize = maxSize;</span><br><span class="line">        arrayStack = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="keyword">this</span>.maxSize];	<span class="comment">// 初始化数组</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 栈满</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isFull</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> top == maxSize - <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 栈空</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> top == -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 入栈</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (isFull()) &#123;</span><br><span class="line">            System.out.println(<span class="string">"栈满..."</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        top++;</span><br><span class="line">        arrayStack[top] = value;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 出栈</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"栈空..."</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        res = arrayStack[top];</span><br><span class="line">        top--;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 遍历</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showStack</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (isEmpty()) &#123;</span><br><span class="line">            System.out.println(<span class="string">"栈空..."</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 从栈顶开始显示数据</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = top; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            System.out.println(<span class="string">"arrayStack["</span> + i + <span class="string">"]="</span> + arrayStack[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="中缀表达式转后缀表达式"><a href="#中缀表达式转后缀表达式" class="headerlink" title="中缀表达式转后缀表达式"></a>中缀表达式转后缀表达式</h2><ul>
+<li><p>中缀表达式：<code>8+(7-3)*2+8</code></p>
+</li>
+<li><p>后缀表达式（逆波兰表达式）：<code>8 7 3 - 2 + 8 * +</code></p>
+</li>
+</ul>
+<blockquote>
+<p>中缀表达式符合人们的习惯，但计算机底层不容易处理；后缀表达式适合计算式进行运算，但是人却不太容易写出来，尤其是表达式很长的情况下，因此在开发中，我们需要将中缀表达式转成后缀表达式</p>
+</blockquote>
+<p><strong>具体步骤如下：</strong></p>
+<ol>
+<li><p>初始化两个栈：运算符栈s1和储存中间结果的栈s2；</p>
+</li>
+<li><p>从左至右扫描中缀表达式；</p>
+<ol>
+<li><p>遇到操作数时，将其压s2；</p>
+</li>
+<li><p>遇到运算符时，比较其与s1栈顶运算符的优先级：<br>1.如果s1为空，或栈顶运算符为左括号”(“，则直接将此运算符入栈；<br>2.否则，若优先级比栈顶运算符的高，也将运算符压入s1；<br>3.否则，将s1栈顶的运算符弹出并压入到s2中，再次转到（2.1）与s1中新的栈顶运算符相比较；</p>
+</li>
+<li><p>遇到括号时：<br> 1.如果是左括号”(“，则直接压入s1<br> 2.如果是右括号”)”，则依次弹出s1栈顶的运算符，并压入s2，直到遇到左括号为止，此时将这一对括号丢弃</p>
+</li>
+<li><p>重复步骤1至3，直到表达式的最右边</p>
+</li>
+</ol>
+</li>
+</ol>
+<ol start="3">
+<li><p>将s1中剩余的运算符依次弹出并压入s2；</p>
+</li>
+<li><p>依次弹出s2中的元素并输出，结果的逆序即为中缀表达式对应的后缀表达式。</p>
+</li>
+</ol>
+<ul>
+<li>将中缀表达式转为List：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">infixExptoList</span><span class="params">(String infix)</span> </span>&#123;</span><br><span class="line">      <span class="comment">// 存放中缀表达式转化后的值</span></span><br><span class="line">      List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">      <span class="keyword">int</span> index = <span class="number">0</span>;    <span class="comment">//遍历指针</span></span><br><span class="line">      <span class="keyword">char</span> c;         <span class="comment">//每次遍历到的字符</span></span><br><span class="line">      String str;     <span class="comment">//用于拼接多位数</span></span><br><span class="line">      <span class="comment">/*do &#123;</span></span><br><span class="line"><span class="comment">          // c是非数字则直接加入到list</span></span><br><span class="line"><span class="comment">          if ((c = infix.charAt(index)) &lt; 48 || (c = infix.charAt(index)) &gt; 57) &#123;</span></span><br><span class="line"><span class="comment">              list.add("" + c);   // char转为String</span></span><br><span class="line"><span class="comment">              index++;</span></span><br><span class="line"><span class="comment">          &#125; else &#123; // c是数字则要考虑多位数</span></span><br><span class="line"><span class="comment">              str = "";</span></span><br><span class="line"><span class="comment">              while (index &lt; infix.length() &amp;&amp; (c = infix.charAt(index)) &gt;= 48 &amp;&amp; (c = infix.charAt(index)) &lt;= 57) &#123;</span></span><br><span class="line"><span class="comment">                  str += c; //拼接</span></span><br><span class="line"><span class="comment">                  index++;</span></span><br><span class="line"><span class="comment">              &#125;</span></span><br><span class="line"><span class="comment">              list.add(str);</span></span><br><span class="line"><span class="comment">          &#125;</span></span><br><span class="line"><span class="comment">      &#125; while (index &lt; infix.length());*/</span></span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; infix.length(); i++) &#123;</span><br><span class="line">          c = infix.charAt(i);</span><br><span class="line">          <span class="comment">// c是非数字则直接加入到list</span></span><br><span class="line">          <span class="keyword">if</span> (c &lt; <span class="number">48</span> || c &gt; <span class="number">57</span>) &#123;</span><br><span class="line">              list.add(<span class="string">""</span> + c);</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">              <span class="comment">// c是数字则要考虑多位数</span></span><br><span class="line">              str = <span class="string">""</span>;</span><br><span class="line">              <span class="keyword">while</span> (i &lt; infix.length() &amp;&amp; (c = infix.charAt(i)) &gt;= <span class="number">48</span> &amp;&amp; (c = infix.charAt(i)) &lt;= <span class="number">57</span>) &#123;</span><br><span class="line">                  str += c; <span class="comment">//拼接</span></span><br><span class="line">                  i++;</span><br><span class="line">              &#125;</span><br><span class="line">              list.add(str);</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> list;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>中缀转后缀</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//即 ArrayList [1,+,(,(,2,+,3,),*,4,),-,5]  =》 ArrayList [1,2,3,+,4,*,+,5,–]</span></span><br><span class="line">	<span class="comment">//方法：将得到的中缀表达式对应的List =&gt; 后缀表达式对应的List</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;String&gt; <span class="title">parseSuffixExpreesionList</span><span class="params">(List&lt;String&gt; ls)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//定义两个栈</span></span><br><span class="line">		Stack&lt;String&gt; s1 = <span class="keyword">new</span> Stack&lt;String&gt;(); <span class="comment">// 符号栈</span></span><br><span class="line">		<span class="comment">//说明：因为s2 这个栈，在整个转换过程中，没有pop操作，而且后面我们还需要逆序输出</span></span><br><span class="line">		<span class="comment">//因此比较麻烦，这里我们就不用 Stack&lt;String&gt; 直接使用 List&lt;String&gt; s2</span></span><br><span class="line">		<span class="comment">//Stack&lt;String&gt; s2 = new Stack&lt;String&gt;(); // 储存中间结果的栈s2</span></span><br><span class="line">		List&lt;String&gt; s2 = <span class="keyword">new</span> ArrayList&lt;String&gt;(); <span class="comment">// 储存中间结果的Lists2</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">//遍历ls</span></span><br><span class="line">		<span class="keyword">for</span>(String item: ls) &#123;</span><br><span class="line">			<span class="comment">//如果是一个数，加入s2</span></span><br><span class="line">			<span class="keyword">if</span>(item.matches(<span class="string">"\\d+"</span>)) &#123;</span><br><span class="line">				s2.add(item);</span><br><span class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span> (item.equals(<span class="string">"("</span>)) &#123;</span><br><span class="line">				s1.push(item);</span><br><span class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span> (item.equals(<span class="string">")"</span>)) &#123;</span><br><span class="line">				<span class="comment">//如果是右括号“)”，则依次弹出s1栈顶的运算符，并压入s2，直到遇到左括号为止，此时将这一对括号丢弃</span></span><br><span class="line">				<span class="keyword">while</span>(!s1.peek().equals(<span class="string">"("</span>)) &#123;</span><br><span class="line">					s2.add(s1.pop());</span><br><span class="line">				&#125;</span><br><span class="line">				s1.pop();<span class="comment">//!!! 将 ( 弹出 s1栈， 消除小括号</span></span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="comment">//当item的优先级小于等于s1栈顶运算符, 将s1栈顶的运算符弹出并加入到s2中，再次转到(4.1)与s1中新的栈顶运算符相比较</span></span><br><span class="line">				<span class="comment">//问题：我们缺少一个比较优先级高低的方法</span></span><br><span class="line">				<span class="keyword">while</span>(s1.size() != <span class="number">0</span> &amp;&amp; Operation.getValue(s1.peek()) &gt;= Operation.getValue(item) ) &#123;</span><br><span class="line">					s2.add(s1.pop());</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="comment">//还需要将item压入栈</span></span><br><span class="line">				s1.push(item);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//将s1中剩余的运算符依次弹出并加入s2</span></span><br><span class="line">		<span class="keyword">while</span>(s1.size() != <span class="number">0</span>) &#123;</span><br><span class="line">			s2.add(s1.pop());</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> s2; <span class="comment">//注意因为是存放到List, 因此按顺序输出就是对应的后缀表达式对应的List</span></span><br><span class="line">		</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="逆波兰计算器"><a href="#逆波兰计算器" class="headerlink" title="逆波兰计算器"></a>逆波兰计算器</h2>
+          
         
       
-    </p></div>
+    </div>
     
     
     
@@ -874,7 +1081,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/25/Hexo博客搭建之路/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/22/02-链表/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Arnold-luan">
@@ -893,7 +1100,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/05/25/Hexo博客搭建之路/" itemprop="url">Hexo博客搭建之路</a></h1>
+                <a class="post-title-link" href="/2020/06/22/02-链表/" itemprop="url">未命名</a></h1>
         
 
         <div class="post-meta">
@@ -905,8 +1112,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-25T21:18:30+08:00">
-                2019-05-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-22T11:56:57+08:00">
+                2020-06-22
               </time>
             
 
@@ -921,34 +1128,12 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-05-29T11:51:50+08:00">
-                2019-05-29
+              <time title="更新于" itemprop="dateModified" datetime="2020-05-27T22:17:56+08:00">
+                2020-05-27
               </time>
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/" itemprop="url" rel="index">
-                    <span itemprop="name">教程</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -971,7 +1156,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  774
+                  2.4k
                 </span>
               
 
@@ -987,7 +1172,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  10
                 </span>
               
             </div>
@@ -1009,17 +1194,87 @@
 
       
         
-          <h1 id="搭建远程博客三要素"><a href="#搭建远程博客三要素" class="headerlink" title="搭建远程博客三要素"></a>搭建远程博客三要素</h1><p><strong>搭建个人博客=域名(外网可访问的地址)+外网服务器(外网存储文件图片的地方)+解析(本地与服务器做映射)</strong><br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/05/25/Hexo博客搭建之路/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <h2 id="链表（linklisted）介绍"><a href="#链表（linklisted）介绍" class="headerlink" title="链表（linklisted）介绍"></a>链表（linklisted）介绍</h2><ul>
+<li>链表是有序列表，但是在内存中的存储不是连续的，如下图：</li>
+</ul>
+<p><img src="C:\Users\Arnold\AppData\Roaming\Typora\typora-user-images\1590154772540.png" alt="1590154772540"></p>
+<ul>
+<li>链表是以<code>节点</code>的方式来存储，是链式存储</li>
+<li>每个节点包含<code>data域</code>，<code>next域</code>：指向下一个节点.</li>
+<li>如图：发现链表的各个节点不一定是连续存储.</li>
+<li>链表分带头节点的链表和没有头节点的链表，根据实际的需求来确定</li>
+</ul>
+<h2 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h2><p>使用带head头的单链表—水浒传英雄榜的增删改查</p>
+<ol>
+<li>方法一：直接添加到链表的尾部（不排序—按添加的顺序）</li>
+</ol>
+<p><img src="C:\Users\Arnold\AppData\Roaming\Typora\typora-user-images\1590155240379.png" alt="1590155240379"></p>
+<ol start="2">
+<li>方法二：根据排名将英雄插入到指定位置（如果有这个排名，则添加失败，并给出提示）</li>
+</ol>
+<p><img src="C:\Users\Arnold\AppData\Roaming\Typora\typora-user-images\1590159355052.png" alt="1590159355052"></p>
+<ul>
+<li>实现：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 英雄节点类，每一个英雄就是一个节点</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HeroNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> num;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> String nickname;</span><br><span class="line">    <span class="keyword">private</span> HeroNode next;  <span class="comment">// 指向下一个节点</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 构造器</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">HeroNode</span><span class="params">(<span class="keyword">int</span> num, String name, String nickname)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.num = num;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.nickname = nickname;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 单链表类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingleLinkedList</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 头结点</span></span><br><span class="line">    <span class="keyword">private</span> HeroNode headNode = <span class="keyword">new</span> HeroNode(<span class="number">0</span>, <span class="string">""</span>, <span class="string">""</span>);</span><br><span class="line">    <span class="comment">// 1.添加节点到链表尾部:next为null</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addNode</span><span class="params">(HeroNode heroNode)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 临时变量</span></span><br><span class="line">        HeroNode temp = headNode;</span><br><span class="line">        <span class="comment">// 遍历：找到尾部元素</span></span><br><span class="line">        <span class="comment">// 结束条件：temp.next==null</span></span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (temp.getNext() == <span class="keyword">null</span>) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 没有找到，则temp后移</span></span><br><span class="line">            temp = temp.getNext();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 添加节点</span></span><br><span class="line">        temp.setNext(heroNode);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.按编号顺序添加到链表尾部</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addNodeByOrder</span><span class="params">(HeroNode heroNode)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 找到要插入节点的前一个位置插入</span></span><br><span class="line">        <span class="comment">// 临时变量</span></span><br><span class="line">        HeroNode temp = headNode;</span><br><span class="line">        <span class="keyword">boolean</span> flag = <span class="keyword">false</span>; <span class="comment">// 是否已经存在要插入的编号</span></span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (temp.getNext() == <span class="keyword">null</span>) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (temp.getNext().getNum() &gt; heroNode.getNum()) &#123; <span class="comment">// 找到要插入的位置</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (temp.getNext().getNum() == heroNode.getNum()) &#123; <span class="comment">//已经存在要插入的编号</span></span><br><span class="line">                System.out.println(<span class="string">"表中已存在该元素"</span>);</span><br><span class="line">                flag = <span class="keyword">true</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// temp后移</span></span><br><span class="line">            temp = temp.getNext();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 添加节点</span></span><br><span class="line">        <span class="keyword">if</span> (flag) &#123;</span><br><span class="line">            System.out.printf(<span class="string">"准备添加的英雄编号%d已经存在了，不能添加"</span>, heroNode.getNum());</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            heroNode.setNext(temp);</span><br><span class="line">            temp.setNext(heroNode);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3.修改节点</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">update</span><span class="params">(HeroNode heroNode)</span></span>&#123;</span><br><span class="line">        <span class="comment">// 判断是否为空</span></span><br><span class="line">        <span class="keyword">if</span> (headNode.getNext() == <span class="keyword">null</span>) &#123;</span><br><span class="line">            System.out.println(<span class="string">"链表为空"</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 找到要修改的节点：根据编号</span></span><br><span class="line">        HeroNode temp = headNode.getNext();</span><br><span class="line">        <span class="keyword">boolean</span> flag = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span> (temp == <span class="keyword">null</span>)&#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (temp.getNum()==heroNode.getNum())&#123;</span><br><span class="line">                flag=<span class="keyword">true</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 后移</span></span><br><span class="line">            temp=temp.getNext();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 修改</span></span><br><span class="line">        <span class="keyword">if</span> (flag)&#123;</span><br><span class="line">            temp.setName(heroNode.getName());</span><br><span class="line">            temp.setNickname(heroNode.getNickname());</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.printf(<span class="string">"没有找到英雄编号%d的英雄，不能修改"</span>, heroNode.getNum());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 4.删除</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">delete</span><span class="params">(HeroNode heroNode)</span> </span>&#123;</span><br><span class="line">        HeroNode temp = headNode;</span><br><span class="line">        <span class="keyword">boolean</span> flag = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (temp.getNext() == <span class="keyword">null</span>) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (temp.getNext().getNum() == heroNode.getNum()) &#123;</span><br><span class="line">                flag = <span class="keyword">true</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            temp = temp.getNext();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 删除：temp.next=temp.next.next</span></span><br><span class="line">        <span class="keyword">if</span> (flag) &#123;</span><br><span class="line">            temp.setNext(temp.getNext().getNext());</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.printf(<span class="string">"没有找到英雄编号%d的英雄，不能删除"</span>, heroNode.getNum());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 遍历显示链表</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showList</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 判断是否为空</span></span><br><span class="line">        <span class="keyword">if</span> (headNode.getNext()==<span class="keyword">null</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">"链表为空"</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 临时变量</span></span><br><span class="line">        HeroNode temp = headNode.getNext();</span><br><span class="line">        <span class="comment">// 遍历：找到尾部元素</span></span><br><span class="line">        <span class="comment">// 结束条件：temp.next==null</span></span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (temp == <span class="keyword">null</span>) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 打印</span></span><br><span class="line">            System.out.println(temp);</span><br><span class="line">            <span class="comment">// temp后移</span></span><br><span class="line">            temp = temp.getNext();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="双向链表"><a href="#双向链表" class="headerlink" title="双向链表"></a>双向链表</h2><p>思路：</p>
+<p><img src="C:\Users\Arnold\AppData\Roaming\Typora\typora-user-images\1590550363167.png" alt="1590550363167"></p>
+<ol>
+<li><p><strong>遍历</strong> 方法和单链表一样，只是可以向前查找，也可以向后查找</p>
+</li>
+<li><p><strong>添加</strong>（默认添加到链表的最后）</p>
+<ol>
+<li>找到双向链表的最后一个节点—&gt;<code>while循环，break条件：node.next=null</code></li>
+<li><code>temp.next=newNode</code></li>
+<li><code>newNode.pre=temp</code></li>
+</ol>
+</li>
+<li><p><strong>修改</strong> 方法与单链表一样（根据编号找到待修改的节点）</p>
+</li>
+<li><p><strong>删除</strong>（双向链表可以自我删除某个节点）</p>
+<ol>
+<li>找到待删除的节点temp（根据编号）</li>
+<li><code>temp.pre.next=temp.next</code>  待删除节点的前一个节点的next域指向待删除节点的后一个节点</li>
+<li><code>temp.next.pre=temp.pre</code>    待删除节点的后一个节点的pre域指向待删除节点的前一个节点（如果是最后一个节点则不需要此步骤）</li>
+</ol>
+</li>
+</ol>
+<p>代码实现：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Setter</span></span><br><span class="line"><span class="meta">@Getter</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DoubleHeroNode</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> no; <span class="comment">// 编号</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> String nickname;</span><br><span class="line">    <span class="keyword">private</span> DoubleHeroNode pre; <span class="comment">//指向前一个节点的域</span></span><br><span class="line">    <span class="keyword">private</span> DoubleHeroNode next; <span class="comment">//指向后一个节点的域</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 构造器</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">DoubleHeroNode</span><span class="params">(<span class="keyword">int</span> no, String name, String nickname)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.no = no;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.nickname = nickname;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"DoubleHeroNode&#123;"</span> +</span><br><span class="line">                <span class="string">"no="</span> + no +</span><br><span class="line">                <span class="string">", name='"</span> + name + <span class="string">'\''</span> +</span><br><span class="line">                <span class="string">", nickname='"</span> + nickname + <span class="string">'\''</span> +</span><br><span class="line">                <span class="string">'&#125;'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DoubleLinkedList</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 初始化一个头结点</span></span><br><span class="line">    <span class="keyword">private</span> DoubleHeroNode head = <span class="keyword">new</span> DoubleHeroNode(<span class="number">0</span>, <span class="string">""</span>, <span class="string">""</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 遍历链表</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showList</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 校验链表是否为空</span></span><br><span class="line">        <span class="keyword">if</span> (head.getNext() == <span class="keyword">null</span>) &#123;</span><br><span class="line">            System.out.println(<span class="string">"链表为空..."</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 头节点不动----辅助节点</span></span><br><span class="line">        DoubleHeroNode temp = head.getNext();</span><br><span class="line">        <span class="comment">// 循环遍历</span></span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (temp == <span class="keyword">null</span>) &#123;  <span class="comment">// 结束条件</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 输出节点信息</span></span><br><span class="line">            System.out.println(temp);</span><br><span class="line">            <span class="comment">// temp指针后移</span></span><br><span class="line">            temp = temp.getNext();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 添加节点：在尾部添加</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> newHeroNode</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(DoubleHeroNode newHeroNode)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 找到双向链表的最后一个节点---&gt;`while循环，break条件：node.next=null`</span></span><br><span class="line">        <span class="comment">// 头节点不动----辅助节点</span></span><br><span class="line">        DoubleHeroNode temp = head;</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (temp.getNext() == <span class="keyword">null</span>) &#123; <span class="comment">// 找到最后一个节点</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 指针后移</span></span><br><span class="line">            temp = temp.getNext();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 在最后一个节点后面添加节点</span></span><br><span class="line">        temp.setNext(newHeroNode);</span><br><span class="line">        newHeroNode.setPre(temp);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 修改节点</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> heroNode</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">update</span><span class="params">(DoubleHeroNode heroNode)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 根据编号找到待修改的节点---循环遍历</span></span><br><span class="line">        DoubleHeroNode temp = head.getNext();</span><br><span class="line">        <span class="keyword">boolean</span> flag = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (temp == <span class="keyword">null</span>) &#123; <span class="comment">// 找到最后一个节点</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (temp.getNo() == heroNode.getNo()) &#123;   <span class="comment">// 找到待修改的节点</span></span><br><span class="line">                flag = <span class="keyword">true</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// temp后移</span></span><br><span class="line">            temp = temp.getNext();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 修改</span></span><br><span class="line">        <span class="keyword">if</span> (flag) &#123;</span><br><span class="line">            temp.setName(heroNode.getName());</span><br><span class="line">            temp.setNickname(heroNode.getNickname());</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.printf(<span class="string">"没有找到 编号 %d 的节点，不能修改\n"</span>, heroNode.getNo());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 删除节点：根据编号</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> no</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">delete</span><span class="params">(<span class="keyword">int</span> no)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 判断当前链表是否为空</span></span><br><span class="line">        <span class="keyword">if</span> (head.getNext() == <span class="keyword">null</span>) &#123;<span class="comment">// 空链表</span></span><br><span class="line">            System.out.println(<span class="string">"链表为空，无法删除"</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 根据编号找到待删除的节点</span></span><br><span class="line">        DoubleHeroNode temp = head.getNext();</span><br><span class="line">        <span class="keyword">boolean</span> flag = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (temp == <span class="keyword">null</span>) &#123; <span class="comment">// 找到最后一个节点</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (temp.getNo() == no) &#123;   <span class="comment">// 找到待修改的节点</span></span><br><span class="line">                flag = <span class="keyword">true</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// temp后移</span></span><br><span class="line">            temp = temp.getNext();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (flag) &#123;</span><br><span class="line">            <span class="comment">// 删除节点</span></span><br><span class="line">            temp.getPre().setNext(temp.getNext());</span><br><span class="line">            <span class="comment">// 如果是最后一个节点，就不需要执行下面这句话，否则出现空指针</span></span><br><span class="line">            <span class="keyword">if</span> (temp.getNext() != <span class="keyword">null</span>) &#123;</span><br><span class="line">                temp.getNext().setPre(temp.getPre());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.printf(<span class="string">"要删除的 %d 节点不存在\n"</span>, no);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="单向环形链表"><a href="#单向环形链表" class="headerlink" title="单向环形链表"></a>单向环形链表</h2><h3 id="约瑟夫问题"><a href="#约瑟夫问题" class="headerlink" title="约瑟夫问题"></a>约瑟夫问题</h3><p>Josephu问题为：设编号为1，2，…n的n个人围坐一圈，约定编号为k（l&lt;=k&lt;=n)的人从1开始报数，数到m的那个人出列，它的下一位又从1开始报数，数到m的那个人又出列，依次类推，直到所有人出列为止，由此产生一个出队编号的序列。</p>
+<h3 id="单向环形链表-1"><a href="#单向环形链表-1" class="headerlink" title="单向环形链表"></a>单向环形链表</h3><p><img src="C:\Users\Arnold\AppData\Roaming\Typora\typora-user-images\1590579356015.png" alt="1590579356015"></p>
+<h3 id="单向环形链表解决约瑟夫问题"><a href="#单向环形链表解决约瑟夫问题" class="headerlink" title="单向环形链表解决约瑟夫问题"></a>单向环形链表解决约瑟夫问题</h3><p><img src="C:\Users\Arnold\AppData\Roaming\Typora\typora-user-images\1590579407811.png" alt="1590579407811"></p>
+<h4 id="约瑟夫问题—创建单向环形链表示意图"><a href="#约瑟夫问题—创建单向环形链表示意图" class="headerlink" title="约瑟夫问题—创建单向环形链表示意图"></a>约瑟夫问题—创建单向环形链表示意图</h4><p><img src="C:\Users\Arnold\AppData\Roaming\Typora\typora-user-images\1590579475587.png" alt="1590579475587"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Setter</span></span><br><span class="line"><span class="meta">@Getter</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Boy</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> no;</span><br><span class="line">    <span class="keyword">private</span> Boy next; <span class="comment">// 指向下一个节点，默认null</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Boy</span><span class="params">(<span class="keyword">int</span> no)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.no = no;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>按编号添加节点并形成环</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CircleSingleLinkedList</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 创建first节点</span></span><br><span class="line">    <span class="keyword">private</span> Boy first = <span class="keyword">null</span>;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 根据序号添加boy节点，形成环形</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> nums：节点数量</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addBoys</span><span class="params">(<span class="keyword">int</span> nums)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 传参校验</span></span><br><span class="line">        <span class="keyword">if</span> (nums &lt; <span class="number">1</span>) &#123;</span><br><span class="line">            System.out.println(<span class="string">"传入的参数不正确"</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 辅助指针</span></span><br><span class="line">        Boy curBoy = <span class="keyword">null</span>;</span><br><span class="line">        <span class="comment">// 循环添加Boy，根据编号顺序形成环形</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= nums; i++) &#123;</span><br><span class="line">            <span class="comment">// 根据编号创建boy节点</span></span><br><span class="line">            Boy boy = <span class="keyword">new</span> Boy(i);</span><br><span class="line">            <span class="comment">// 如果是第一个节点</span></span><br><span class="line">            <span class="keyword">if</span> (i == <span class="number">1</span>) &#123;</span><br><span class="line">                first = boy;</span><br><span class="line">                first.setNext(first); <span class="comment">// 形成环</span></span><br><span class="line">                curBoy = first;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                curBoy.setNext(boy);</span><br><span class="line">                boy.setNext(first); <span class="comment">// 形成环</span></span><br><span class="line">                curBoy = boy;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 遍历链表</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showList</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 判断链表是否为空</span></span><br><span class="line">        <span class="keyword">if</span> (first == <span class="keyword">null</span>) &#123;</span><br><span class="line">            System.out.println(<span class="string">"链表为空..."</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 辅助指针</span></span><br><span class="line">        Boy temp = first;</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            System.out.println(<span class="string">"小孩的编号为："</span> + temp.getNo());</span><br><span class="line">            <span class="keyword">if</span> (temp.getNext() == first) &#123; <span class="comment">//终止条件</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// temp后移</span></span><br><span class="line">            temp = temp.getNext();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="约瑟夫问题—小孩出圈思路示意图"><a href="#约瑟夫问题—小孩出圈思路示意图" class="headerlink" title="约瑟夫问题—小孩出圈思路示意图"></a>约瑟夫问题—小孩出圈思路示意图</h4><p><img src="C:\Users\Arnold\AppData\Roaming\Typora\typora-user-images\1590579546986.png" alt="1590579546986"></p>
+<ol>
+<li>创建辅助指针firstBehind，指向环形链表的最后一个节点（跟在first节点的后面）</li>
+<li>从第k个人开始报数：first和firstBehind同时向前移动k-1次</li>
+<li><p>数m下：first和firstBehind同时向前移动m-1次</p>
+</li>
+<li><p>此时first指针指向的节点就是要出圈的节点</p>
+<ol>
+<li>first=first.next</li>
+<li>firstBehind.next=first</li>
+</ol>
+<blockquote>
+<p>原来first指向的节点就没有任何引用，会被回收</p>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CircleSingleLinkedList</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 创建first节点</span></span><br><span class="line">    <span class="keyword">private</span> Boy first = <span class="keyword">null</span>;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 约瑟夫问题：小孩出圈</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> startNo：起始编号</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> coutNum：数几下</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> totalNums：总数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">JosephuBoy</span><span class="params">(<span class="keyword">int</span> startNo, <span class="keyword">int</span> coutNum, <span class="keyword">int</span> totalNums)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 参数校验</span></span><br><span class="line">        <span class="keyword">if</span> (first == <span class="keyword">null</span> || startNo &lt; <span class="number">1</span> || startNo &gt; totalNums) &#123;</span><br><span class="line">            System.out.println(<span class="string">"参数传递不合理..."</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 辅助指针：指向环形链表的最后一个节点（跟在first节点的后面）</span></span><br><span class="line">        Boy firstBehind = first;</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (firstBehind.getNext() == first) &#123; <span class="comment">// 指向环形链表的最后一个节点</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            firstBehind = firstBehind.getNext();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 报数前：first和firstBehind同时向前移动startNo-1次</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; startNo - <span class="number">1</span>; i++) &#123;</span><br><span class="line">            first = first.getNext();</span><br><span class="line">            firstBehind = firstBehind.getNext();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 报数时：first和firstBehind同时向前移动coutNum-1次，此时first指针指向的节点就是要出圈的节点</span></span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (firstBehind == first) &#123;    <span class="comment">//只有一个节点</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// first和firstBehind同时向前移动coutNum-1次</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; coutNum - <span class="number">1</span>; i++) &#123;</span><br><span class="line">                first = first.getNext();</span><br><span class="line">                firstBehind = firstBehind.getNext();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 此时first指针指向的节点就是要出圈的节点:删除节点</span></span><br><span class="line">            System.out.println(<span class="string">"出圈小孩序号："</span> + first.getNo());</span><br><span class="line">            first = first.getNext();</span><br><span class="line">            firstBehind.setNext(first);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"最后留在圈中的小孩："</span> + first.getNo());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
         
       
-    </p></div>
+    </div>
     
     
     
@@ -1056,7 +1311,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1104,7 +1359,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1223,7 +1478,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -1237,7 +1492,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">17.5k</span>
+    <span title="Site words total count">39.1k</span>
   
 </div>
 
